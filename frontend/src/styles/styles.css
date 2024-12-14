@@ -1,0 +1,156 @@
+/*CSS FOR Personalised progs*/
+body {
+	background-color: #2E3537;
+	font-family: 'Arial', sans-serif;
+  }
+  
+  :root {
+	--cards: 4;
+	--cardHeight: 87vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
+  }
+  
+  .container {
+	width: 100%;
+	margin: 0 auto;
+	align-items: center;
+  }
+  
+  #cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), auto); /* Use auto height for cards */
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+	margin-bottom: var(--cardMargin);
+  }
+  
+  #card1 {
+	--index: 1;
+  }
+  #card2 {
+	--index: 2;
+  }
+  #card3 {
+	--index: 3;
+  }
+  #card4 {
+	--index: 4;
+  }
+  
+  .card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+  }
+  
+  #card1 .card-body {
+	background-color: #f0e1b2;
+  }
+  #card2 .card-body {
+	background-color: #cecb9a;
+  }
+  #card3 .card-body {
+	background-color: #a8a369;
+  }
+  #card4 .card-body {
+	background-color: #908226;
+  }
+  
+  .card-body {
+	box-sizing: border-box;
+	padding: 2px;
+	border-radius: 10px; /* Gentle rounded edges */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+	min-height: 60vh; /* Change to min-height */
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #52B2CF;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-body:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 {
+	font-size: 2.5em;
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Tablet and smaller desktops (up to 1024px) */
+  @media (max-width: 1024px) {
+	:root {
+	  --cards: 2; /* Show 2 cards per row */
+	}
+  
+	#cards {
+	  grid-template-columns: 1fr 1fr; /* 2 cards per row */
+	  grid-template-rows: auto;
+	}
+  
+	.card-body {
+	  min-height: 50vh; /* Adjust height for tablets and smaller desktops */
+	  max-width: 100%; /* Reduce max width */
+	  padding: 10px; /* Adjust padding */
+	  border-radius: 8px; /* Slightly sharper corners */
+	}
+  
+	h2 {
+	  font-size: 2em; /* Adjust font size for smaller screens */
+	}
+  }
+  
+  /* Tablets (up to 768px) */
+  @media (max-width: 768px) {
+	:root {
+	  --cards: 2; /* Keep 2 cards per row */
+	}
+  
+	#cards {
+	  grid-template-columns: 1fr 1fr; /* 2 cards per row */
+	  grid-template-rows: auto;
+	}
+  
+	.card-body {
+	  min-height: 45vh; /* Smaller height for tablets */
+	  max-width: 100%; /* Full width */
+	  padding: 10px; /* Adjust padding */
+	}
+  
+	h2 {
+	  font-size: 1.8em; /* Adjust font size for smaller screens */
+	}
+  }
+  
+  /* Mobile screens (up to 480px) */
+  @media (max-width: 480px) {
+	:root {
+	  --cards: 1; /* Show 1 card per row */
+	}
+  
+	#cards {
+	  grid-template-columns: 1fr; /* 1 card per row */
+	  grid-template-rows: auto;
+	}
+  
+	.card-body {
+	  min-height: 40vh; /* Further reduce height for small screens */
+	  max-width: 100%; /* Full width */
+	  padding: 8px; /* Smaller padding */
+	}
+  
+	h2 {
+	  font-size: 1.5em; /* Smaller font size */
+	}
+  }
+  
