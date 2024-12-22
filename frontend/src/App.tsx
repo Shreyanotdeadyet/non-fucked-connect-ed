@@ -13,6 +13,7 @@ import './styles/styles.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import Home from './pages/Home.tsx'
 
 
 function App() {
@@ -200,6 +201,7 @@ function App() {
             </li>
         </ul>
     </div>
+    <Home/>
 </body>
     </div>
   );
