@@ -10,6 +10,10 @@ export default {
         lora: ['Lora', 'serif'],
       },
       colors: {
+        'red': {
+          500: '#F87171',
+          900: '#B91C1C',
+        },
         'pastel-blue': '#a0c8ff',
         'pastel-pink': '#ff8ca0',
       },

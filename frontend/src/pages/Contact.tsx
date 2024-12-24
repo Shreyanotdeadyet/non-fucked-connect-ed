@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Contact from "../assets/peakpx.jpg"
+import Contact from "../assets/peakpx.jpg";
+
 interface FormData {
   name: string;
   email: string;
@@ -26,13 +27,19 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(formData);
+    // 7249418286
+    const whatsappNumber = '8452898618'; // Add your WhatsApp number with country code
+    const message = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phoneNumber}\nMessage: ${formData.message}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
     <div className="min-h-screen bg-black flex items-center justify-center">
-      <div className="flex w-full max-w-7xl p-8">
+      <div className="flex flex-col md:flex-row w-full max-w-7xl p-8">
         {/* Image on the left side */}
-        <div className="w-1/2 h-[600px]">
+        <div className="w-full md:w-1/2 h-[400px] md:h-[600px]">
           <img
             src={Contact} // Add your image path here
             alt="Contact"
@@ -41,8 +48,8 @@ const ContactForm: React.FC = () => {
         </div>
 
         {/* Form on the right side */}
-        <div className="w-1/2 ml-8 bg-black text-white p-12 rounded-lg shadow-lg space-y-6">
-          <h2 className="text-4xl font-semibold mb-6">Get in Touch</h2>
+        <div className="w-full md:w-1/2 md:ml-8 bg-black text-white p-8 md:p-12 rounded-lg shadow-lg space-y-6 mt-6 md:mt-0">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Get in Touch</h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <input

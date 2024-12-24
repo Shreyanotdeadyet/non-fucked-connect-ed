@@ -1,19 +1,23 @@
 import AboutUs from "./pages/About.tsx"
 import './index.css'
-import MissionStatement from "./components/whyus.tsx"
-import PolaroidEffect from "./components/team.tsx"
 import ContactUsForm from "./pages/Contact.tsx"
-import Photo from "./components/photo.tsx"
-import Team from "./components/team.tsx"
+import Photo from "./components/about_photo.tsx"
+import Team from "./components/about_team.tsx"
+import Navbar from "./components/Navbar.tsx"
+import Home  from "./pages/Home.tsx"
+import { Routes, Route } from 'react-router-dom';
+
 function App() {
   return (
     <> 
-
-      <AboutUs></AboutUs>
-      {/* <ContactUsForm/> */}
-      {/* <Photo/> */}
-      {/* <Team></Team> */}
-    </>
+      <Navbar/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/contact" element={<ContactUsForm />} />
+      </Routes>
+    </> 
   )
 }
 

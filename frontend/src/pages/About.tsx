@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Target, Compass, BookOpen, Users } from "lucide-react"; // Updated import for lucide-react icons
-import WhyUsSection from '../components/whyus';
-import Team from "../components/team";
+import WhyUsSection from '../components/about_whyus';
+import Team from "../components/about_team";
 const AboutUs = () => {
   const words = ["Empower", "Inspire", "Guide"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
