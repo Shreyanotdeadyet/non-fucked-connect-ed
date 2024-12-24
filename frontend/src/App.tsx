@@ -201,7 +201,7 @@ function App() {
             </li>
         </ul>
     </div>
-    <Home/>
+    <Home/> 
 </body>
     </div>
   );
