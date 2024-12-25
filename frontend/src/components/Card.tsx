@@ -1,7 +1,7 @@
 import { CardInterface } from "../types"
 import Badge from "./Badge"
 import Button from "./Button"
-import styles from './Card.module.css'
+import styles from '../styles/Card.module.css'
 
 const Card = ({body,btn,title,badge,image,indicator, subtitle}: CardInterface) => {
   return (
@@ -33,3 +33,4 @@ const Card = ({body,btn,title,badge,image,indicator, subtitle}: CardInterface) =
   )
 }
 export default Card
+

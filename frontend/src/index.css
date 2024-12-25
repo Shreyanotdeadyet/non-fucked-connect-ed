@@ -110,3 +110,12 @@ small {
 .slick-dots li.slick-active button:before {
   color:orange !important;
 }
+
+index.css or App.css
+.bg-beige {
+  background-color: #f5f5dc; /* Beige color */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

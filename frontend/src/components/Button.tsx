@@ -1,6 +1,5 @@
 import { ButtonInterface } from "../types"
-import styles from './Button.module.css'
-
+import styles from '../styles/Button.module.css'
 const Button = ({text, filled, type, href, icon}: ButtonInterface) => {
   const filledClass = filled ? styles.filled : "";
   return (
@@ -11,3 +10,5 @@ const Button = ({text, filled, type, href, icon}: ButtonInterface) => {
   )
 }
 export default Button
+
+
