@@ -1,4 +1,4 @@
-
+import {MarqueeDemo} from "@/components/MarqueeDemo"
 import { BookmarkIcon, BookOpenIcon, DocumentIcon, PencilSquareIcon, VideoCameraIcon } from '@heroicons/react/24/solid'
 import '../styles/App.css'
 import Badge from '../components/Badge.tsx'
@@ -16,7 +16,7 @@ import Slider from "react-slick";
 import '../index.css';
 
 
-function App() {
+function Home() {
   
   var settings = {
     dots: true,
@@ -273,8 +273,14 @@ function App() {
         </ul>
     </div>
 </body> */}
+      <div className="bg-gray-900">
+      <MarqueeDemo/>
+      
     </div>
+    </div>
+    
   );
 }
 
-export default App;
+export default Home;
+
