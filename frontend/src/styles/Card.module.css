@@ -8,8 +8,22 @@
     border-top: .1em solid white;
     border-left: .1em solid white;
     max-width: var(--content);
+    display: flex;
+    flex-direction: column;
+  }
+   
+
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column; /* Change to vertical layout on smaller screens */
+    }
+  
+    .image {
+      width: 100%; /* Allow image to span full width */
+    }
   }
   
+
   .body {
     max-width: var(--content);
   }
@@ -33,4 +47,6 @@
     place-items: center;
     padding: var(--space-sm);
     transform: translate(50%, -50%);
-  }
+  } 
+
+  

@@ -169,6 +169,7 @@ small {
   color:orange !important;
 }
 
+
 @layer base {
   * {
     @apply border-border;
@@ -177,3 +178,9 @@ small {
     @apply bg-background text-foreground;
   }
 }
+
+/* index.css or App.css */
+.bg-beige {
+  background-color: #f5f5dc; /* Beige color */
+}
+
