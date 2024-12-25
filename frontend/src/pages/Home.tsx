@@ -1,3 +1,4 @@
+import GridLayout from "@/components/GridLayout";
 import {MarqueeDemo} from "@/components/MarqueeDemo"
 import { BookmarkIcon, BookOpenIcon, DocumentIcon, PencilSquareIcon, VideoCameraIcon } from '@heroicons/react/24/solid'
 import '../styles/App.css'
@@ -55,6 +56,11 @@ function Home() {
   };
 
   return (
+
+    <div className="bg-gray-900">
+      <GridLayout/>
+      <MarqueeDemo/>      
+
     <div className="App">
       <h1> Services </h1>
       <br></br>
@@ -273,10 +279,7 @@ function Home() {
         </ul>
     </div>
 </body> */}
-      <div className="bg-gray-900">
-      <MarqueeDemo/>
       
-    </div>
     </div>
     
   );

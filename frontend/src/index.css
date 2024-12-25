@@ -40,11 +40,18 @@
   --round-full: 100vmax;
 }
 
+#root {
+  width: 100%;        /* Make the root container responsive */
+  height: auto;       /* Allow content to grow vertically */
+  overflow-x: hidden; /* Prevent unwanted horizontal scrolling */
+}
+
+
 body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  padding: var(--space-lg);
+  /* padding: var(--space-lg); */
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: var(--fs-400);
   line-height: var(--lh-1-4);
