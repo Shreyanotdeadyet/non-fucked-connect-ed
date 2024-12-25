@@ -1,0 +1,116 @@
+/* Styles for Card */
+.card {
+    flex: 1 1 300px;
+    position: relative;
+    background-color: hsl(var(--bkg1));
+    box-shadow: 2px 2px 40px hsl(var(--muted) / .5);
+    padding: var(--space-lg);
+    border-radius: var(--round-lg);
+    border-top: .1em solid white;
+    border-left: .1em solid white;
+    max-width: var(--content);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column; /* Change to vertical layout on smaller screens */
+    }
+  
+    .image {
+      width: 100%; /* Allow image to span full width */
+    }
+  }
+  
+  .body {
+    max-width: var(--content);
+  }
+  
+  .image {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/12;
+    object-fit: cover;
+    border-radius: var(--round-md);
+  }
+  
+  .indicator {
+    position: absolute;
+    right: 0;
+    background-color: hsl(var(--ind1));
+    color: hsl(var(--text));
+    border-radius: var(--round-full);
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    padding: var(--space-sm);
+    transform: translate(50%, -50%);
+  }
+  
+  /* Styles for Badge */
+  .badge {
+    padding: .5em 1em;
+    border: .1em solid hsl(var(--accent2));
+    background-color: hsl(var(--bkg1));
+    color: hsl(var(--accent2));
+    border-radius: var(--round-sm);
+    max-width: max-content;
+  }
+  
+  .filledBadge {
+    background-color: hsl(var(--accent2));
+    color: hsl(var(--bkg1));
+  }
+  
+  /* Styles for Button */
+  .btn {
+    --type: transparent;
+    --fill: transparent;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--fs-300);
+    line-height: var(--lh-1);
+    text-decoration: none;
+    cursor: pointer;
+    padding: .5em 1em;
+    border-width: .1em;
+    border-style: solid;
+    border-color: var(--type);
+    border-radius: var(--round-sm);
+    transition: all 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    background-color: var(--ind1);
+    color: var(--fill);
+    max-width: max-content;
+  }
+  
+  .btn svg {
+    height: var(--fs-300);
+  }
+  
+  .btn:focus {
+    outline: none;
+  }
+  
+  .btn:is(:hover, :focus-visible) {
+    box-shadow:
+      0 0 0 3px hsl(var(--bkg1)),
+      0 0 0 6px var(--type);
+    color: bisque;
+    background-color: black;
+  }
+  
+  .primary {
+    --type: hsl(var(--accent2));
+  }
+  
+  .secondary {
+    --type: hsl(var(--accent2));
+  }
+  
+  .filledButton {
+    --fill: var(--type);
+    color: hsl(var(--bkg));
+  }
+  
