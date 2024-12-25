@@ -18,5 +18,7 @@ export interface BadgeInterface {
     title: string,
     subtitle?: string,
     body: string,
+    className?: string;
     btn: ButtonInterface
   }
+

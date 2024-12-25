@@ -1,6 +1,5 @@
 import { BadgeInterface } from "../types"
-import styles from './Badge.module.css'
-
+import styles from '../styles/Badge.module.css'
 const Badge = ({text, filled}: BadgeInterface) => {
   const filledClass = filled ? styles.filled : "";
   return (
