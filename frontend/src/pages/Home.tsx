@@ -1,10 +1,11 @@
+
+import landing from "../assets/landing.mp4"
 import React from 'react';
 import GridLayout from '@/components/GridLayout';
 import { MarqueeDemo } from '@/components/MarqueeDemo';
 import { BookmarkIcon, BookOpenIcon, DocumentIcon, PencilSquareIcon } from '@heroicons/react/24/solid';
 import '../styles/App.css';
 import Card from '../components/Services';
-
 import image1 from '../assets/image1.jpeg';
 import image2 from '../assets/image2.jpeg';
 import image3 from '../assets/image3.jpeg';
@@ -15,6 +16,8 @@ import Slider from "react-slick";
 import '../index.css';
 
 const Home: React.FC = () => {
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -51,14 +54,26 @@ const Home: React.FC = () => {
   };
 
   return (
+  
     <div className="bg-gray-900">
+        <div className="relative w-full h-screen overflow-hidden">
+    {/* Video Background */}
+    <video 
+      className="absolute top-0 left-0 w-full h-full object-cover" 
+      autoPlay 
+      loop 
+      muted 
+      playsInline
+    >
+      <source src={landing} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
       <GridLayout />
-      <MarqueeDemo />
-
       <div className="App">
         <h1 className="text-white text-4xl font-bold text-center">Services</h1>
         <br />
-        <section className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+        <section id="services" className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
           <Card
             body="Do laborum sunt ut ex cupidatat exercitation."
             title="Class 8-9"
@@ -132,6 +147,10 @@ const Home: React.FC = () => {
               </div>
             ))}
           </Slider>
+          
+        </div>
+        <div>
+        <MarqueeDemo />
         </div>
       </div>
     </div>
