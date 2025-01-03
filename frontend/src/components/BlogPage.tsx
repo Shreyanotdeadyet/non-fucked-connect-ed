@@ -1,30 +1,31 @@
-import React from 'react';
+// import React from 'react';
 import '../styles/BlogPage.css';
 
 const BlogPage = () => {
   return (
-    <div className="blog-container bg-white">
-      <header className="hero-section bg-white ">
-        <div className="hero-overlay bg-white">
+    <div className="bg-beg">
+      {/* blog-container */}
+      <header className=" bg-white hero-section">
+        <div className="hero-overlay">
           
         </div>
       </header>
 
-      <section className="categories bg-white">
-        <h2 className="section-title font-geneva bg-white text-purple-700">CATEGORIES</h2>
-        <div className="card-container flex justify-center gap-4 bg-white">
+      <section className="categories">
+        <h2 className="text-white section-title text-dtg-900 text-xl">Categories</h2>
+        <div className="card-container flex justify-center gap-4">
           <div
-            className="bg-white card relative group cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl hover:border-slate-700 card-careers"
+            className="card relative group cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl hover:border-slate-700 card-careers"
           >
             <div
-              className="card-image bg-white bg-cover bg-center h-full w-full"
+              className="card-image bg-cover bg-center h-full w-full"
               style={{
                 backgroundImage:
                   "url('https://i.pinimg.com/236x/c6/80/dd/c680ddc032fbef4df35c7355c4166210.jpg')",
               }}
             >
-              <div className="card-overlay bg-white">
-                <p className="card-text">Careers</p>
+              <div className="card-overlay">
+                <p className="text-xl font-bold">Careers</p>
               </div>
             </div>
           </div>
@@ -40,7 +41,7 @@ const BlogPage = () => {
               }}
             >
               <div className="card-overlay">
-                <p className="card-text text-[#009984] ">Essay Tips</p>
+                <p className="text-xl font-bold">Essay Tips</p>
               </div>
             </div>
           </div>
@@ -56,21 +57,21 @@ const BlogPage = () => {
               }}
             >
               <div className="card-overlay">
-                <p className="card-text text-[#009984] ">College Readiness</p>
+                <p className="text-xl font-bold">College Readiness</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="blogs bg-white">
-        <h2 className="section-title font-geneva text-purple-700">RECENT BLOGS</h2>
-        <div className="blog-card bg-white flex justify-center rounded-lg shadow-md p-4">
+      <section className="blogs">
+        <h2 className="text-white section-title text-dtg-900 text-xl">Recent Blogs</h2>
+        <div className="blog-card bg-white rounded-lg shadow-md p-4">
           <div
             className="blog-placeholder w-1/2 bg-cover bg-center h-32"
             style={{
               backgroundImage:
-                "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq7WGeX5vov1EKe5FbMZB4P6hSm6auAdlRksAsO4RhD0uACM7OnthH_YWjHWCLoIfXQPg&usqp=CAU')",
+                "url('https://plus.unsplash.com/premium_photo-1684581214880-2043e5bc8b8b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')",
             }}
           ></div>
           <div className="blog-details w-1/2 pl-4">
@@ -82,7 +83,7 @@ const BlogPage = () => {
               This is a placeholder for the blog summary. A brief description of
               what the blog covers.
             </p>
-            <button className="read-more bg-[#00e590] hover:bg-[#00c57f] text-white font-bold py-2 px-4 rounded">
+            <button className="read-more bg-pup hover:bg-dpup text-white font-bold py-2 px-4 rounded">
               Read More
             </button>
           </div>
@@ -92,7 +93,7 @@ const BlogPage = () => {
             className="blog-placeholder w-1/2 bg-cover bg-center h-32"
             style={{
               backgroundImage:
-                "url('https://www.shutterstock.com/image-photo/blogging-concept-web-blog-social-600nw-2484136087.jpg')",
+                "url('https://plus.unsplash.com/premium_photo-1684581214880-2043e5bc8b8b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D')",
             }}
           ></div>
           <div className="blog-details w-1/2 pl-4">
@@ -104,7 +105,7 @@ const BlogPage = () => {
               Here is another placeholder for the blog content summary. Brief
               and engaging text.
             </p>
-            <button className="read-more bg-[#00e590] hover:bg-[#00c57f] text-white font-bold py-2 px-4 rounded">
+            <button className="read-more bg-pup hover:bg-dpup text-white font-bold py-2 px-4 rounded">
               Read More
             </button>
           </div>

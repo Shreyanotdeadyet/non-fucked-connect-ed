@@ -4,25 +4,25 @@ import { Users, Target, Compass, Heart } from 'lucide-react';
 const WhyUsSection = () => {
   const sections = [
     {
-      icon: <Users size={48} className="text-[#009984]" />,
+      icon: <Users size={48} className="text-[#00e590]" />,
       title: 'Personal Attention',
       content:
         'We work with a small cohort to ensure 100% dedication to each student. Your ambitions matter to us, and we\'re here to make them achievable.',
     },
     {
-      icon: <Target size={48} className="text-[#009984]" />,
-      title: 'Holistic Development' ,
+      icon: <Target size={48} className="text-[#00e590]" />,
+      title: 'Holistic Development',
       content:
         'Our program deconstructs your interests and influences, helping you find the awareness needed to be the best version of yourself in an increasingly competitive landscape.',
     },
     {
-      icon: <Compass size={48} className="text-[#009984]" />,
+      icon: <Compass size={48} className="text-[#00e590]" />,
       title: 'Customized Guidance',
       content:
         'We offer highly customized College Counseling alongside career guidance, viewing top-tier college admission as a stepping stone toward a fulfilling career and balanced life.',
     },
     {
-      icon: <Heart size={48} className="text-[#009984]" />,
+      icon: <Heart size={48} className="text-[#00e590]" />,
       title: 'Continuous Support',
       content:
         'Our program ensures you feel supported throughout your high school journey - from navigating complex college applications to building your future career path. We\'re here to empower you.',
@@ -33,7 +33,7 @@ const WhyUsSection = () => {
     <div className="bg-white px-4 sm:px-8 lg:px-20">
       <div className="min-h-screen bg-white text-[#e9e5e2] px-8 py-16">
         {/* Title */}
-        <h1 className="text-5xl text-[#6419cc] font-bold text-center mb-12 animate__animated animate__fadeIn">Why Choose Us?</h1>
+        <h1 className="text-5xl font-bold text-[#6419cc] text-center mb-12 animate__animated animate__fadeIn">Why Choose Us?</h1>
         <p className="text-xl text-[#6419cc] text-center mb-16 max-w-2xl mx-auto animate__animated animate__fadeIn animate__delay-1s">
           Your journey to success deserves dedicated guidance and support. Explore what makes our approach unique.
         </p>
