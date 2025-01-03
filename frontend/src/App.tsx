@@ -6,6 +6,7 @@ import Home  from "./pages/Home.tsx"
 import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/Footer.tsx"
 import BlogPage from "./components/BlogPage.tsx"
+import TestimonialComponent from "./components/testimonial.tsx"
 
 function App() {
   return (

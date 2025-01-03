@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import '../index.css';
 import Workshops from "@/components/home_workshops";
 import Services from "@/components/home_services_cards";
-import TestimonialComponent from "@/components/Testimonial";
+import TestimonialComponent from "../components/testimonial";
 
 const Home: React.FC = () => {
 
@@ -43,8 +43,13 @@ const Home: React.FC = () => {
         </div>
         <div>
         <MarqueeDemo />
-        <TestimonialComponent/>
+        
         </div>
+        <div className="w-full h-auto" >
+  <TestimonialComponent />
+</div>
+
+
       </div>
     </div>
   );

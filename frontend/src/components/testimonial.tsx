@@ -84,11 +84,10 @@ const TestimonialComponent = () => {
           {testimonials.map((item, index) => (
             <div
               key={item.id}
-              className={`absolute transition-transform duration-500 ease-in-out rounded-lg shadow-2xl bg-gray-800 p-6 ${
-                item.id === activeId
+              className={`absolute transition-transform duration-500 ease-in-out rounded-lg shadow-2xl bg-gray-800 p-6 ${item.id === activeId
                   ? "w-1/2 scale-100 z-10"
                   : "w-1/3 scale-90 z-0 opacity-50"
-              }`}
+                }`}
               style={{
                 transform: `translateX(${(index - activeId + 1) * 100}%)`,
               }}
@@ -146,9 +145,8 @@ const TestimonialComponent = () => {
           <button
             key={item.id}
             onClick={() => setActiveId(item.id)}
-            className={`w-14 h-14 rounded-full bg-gray-700 text-white flex items-center justify-center font-bold text-base cursor-pointer border-2 border-white transition-all duration-300 ease-in-out transform hover:scale-110 ${
-              item.id === activeId ? "ring-4 ring-red-500" : ""
-            }`}
+            className={`w-14 h-14 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold text-base cursor-pointer border-2 border-white transition-all duration-300 ease-in-out transform hover:scale-110 ${item.id === activeId ? "ring-4 ring-red-500" : ""
+              }`}
           >
             {item.name
               .split(" ")
@@ -157,6 +155,7 @@ const TestimonialComponent = () => {
           </button>
         ))}
       </div>
+
     </div>
   );
 };
