@@ -5,7 +5,7 @@ const GridLayout = () => {
   return (
     <div className="p-6">
       <div
-        className="grid gap-4 bg-gray-900 p-4"
+        className="grid gap-4 p-4"
         style={{
           gridTemplateAreas: `
             "header header header header header header"
@@ -15,7 +15,7 @@ const GridLayout = () => {
         }}
       >
         <div
-          className="bg-white text-center p-5 text-lg font-medium"
+          className="bg-dtg-500 text-center p-5 text-lg font-medium"
           style={{ gridArea: "header" }}
         >
           <NumberTicker
@@ -29,7 +29,7 @@ const GridLayout = () => {
         </div>
 
         <div
-          className="bg-white text-center p-5 text-lg font-medium"
+          className="bg-dtg-500 text-center p-5 text-lg font-medium"
           style={{ gridArea: "menu" }}
         >
           <NumberTicker
@@ -43,7 +43,7 @@ const GridLayout = () => {
         </div>
 
         <div
-          className="bg-white text-center p-5 text-lg font-medium"
+          className="bg-dtg-500 text-center p-5 text-lg font-medium"
           style={{ gridArea: "main" }}
         >
           <NumberTicker
@@ -57,7 +57,7 @@ const GridLayout = () => {
         </div>
 
         <div
-          className="bg-white text-center p-5 text-lg font-medium"
+          className="bg-dtg-500 text-center p-5 text-lg font-medium"
           style={{ gridArea: "right" }}
         >
           <NumberTicker
@@ -71,7 +71,7 @@ const GridLayout = () => {
         </div>
 
         <div
-          className="bg-white text-center p-5 text-lg font-medium"
+          className="bg-dtg-500 text-center p-5 text-lg font-medium"
           style={{ gridArea: "footer" }}
         >
           <NumberTicker
