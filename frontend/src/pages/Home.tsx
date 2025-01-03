@@ -3,7 +3,7 @@ import landing from "../assets/landing.mp4"
 import React from 'react';
 import GridLayout from '@/components/home_GridLayout';
 import { MarqueeDemo } from '@/components/home_MarqueeDemo';
-import '../styles/App.css';
+//import '../styles/App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../index.css';
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           <h2 className="text-2xl font-bold text-white mb-4">Workshops</h2>
           <Workshops/>
         </div>
-        <div>
+       <div>
         <MarqueeDemo />
         </div>
       </div>

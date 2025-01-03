@@ -1,8 +1,16 @@
+const { color } = require('framer-motion');
+
 module.exports = {
 	darkMode: ['class'],
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 	  extend: {
+		color:{
+        beige : '#f7f0de',
+		purple : '#6419cc',
+		lteal: '#00e590',
+		dteal: '#009984', 
+		},
 		fontFamily: {
 		  dmserif: ['"DM Serif Text"', 'serif'],
 		  lora: ['Lora', 'serif'],

@@ -173,7 +173,7 @@ small {
 }
 
 .slick-dots li.slick-active button:before {
-  color:orange !important;
+  color:rgb(187, 131, 28) !important;
 }
 
 
