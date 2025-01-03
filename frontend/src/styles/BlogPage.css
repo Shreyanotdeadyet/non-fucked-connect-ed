@@ -9,7 +9,7 @@
 /* Blog Container */
 .blog-container {
   width: 100%;
-  background-color: black; /* Changed to black */
+  background-color: white; /* Changed to black */
 }
 
 /* Hero Section */
@@ -20,6 +20,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  font: monaco;
 }
 
 .hero-overlay {
@@ -31,16 +32,19 @@
 
 .hero-title {
   font-size: 2.5rem;
-  font-weight: bold;
+  font-weight: extra-bold;
+  font: monaco;
 }
 
 /* Categories Section */
 .categories {
   margin: 3rem 0;
   text-align: center;
+  font: monaco;
 }
 
 .section-title {
+  font: monaco;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
@@ -85,6 +89,7 @@
   color: #fff;
   font-size: 1.25rem;
   font-weight: bold;
+  font: monaco;
 }
 
 /* Blog Section */
@@ -121,16 +126,18 @@
 .blog-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font: monaco;
 }
 
 .blog-summary {
   font-size: 1rem;
   color: #555;
   margin-bottom: 1.5rem;
+  font: monaco;
 }
 
 .read-more {
-  background-color: #007bff;
+  background-color: #00e590;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
@@ -140,5 +147,5 @@
 }
 
 .read-more:hover {
-  background-color: #0056b3;
+  background-color: #009984;
 }

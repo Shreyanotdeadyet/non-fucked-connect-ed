@@ -8,18 +8,18 @@ const Team: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between w-full h-auto lg:h-screen px-4 lg:px-20 py-10 bg-black">
+    <div className="flex flex-col bg-white lg:flex-row items-center lg:items-start lg:justify-between w-full h-auto lg:h-screen px-4 lg:px-20 py-10">
       {/* Left Side: Photo */}
       <div className="w-full lg:w-1/2 flex justify-center items-center mb-10 lg:mb-0">
         <Photo />
       </div>
 
       {/* Right Side: Name and Description */}
-      <div className="w-full lg:w-1/2 flex flex-col justify-center items-start text-left">
-        <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center font-monaco items-start text-left">
+        <h2 className="text-3xl lg:text-5xl font-bold font-monaco text-[#6419cc] mb-4">
           {teamMember.name}
         </h2>
-        <p className="text-lg lg:text-xl text-gray-300">
+        <p className="text-lg lg:text-xl font-monaco text-[#6419cc]">
           {teamMember.description}
         </p>
       </div>
