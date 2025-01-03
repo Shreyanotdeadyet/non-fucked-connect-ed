@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 const testimonials = [
   {
@@ -73,9 +73,9 @@ const TestimonialComponent = () => {
   return (
     <div className="h-screen text-white flex flex-col justify-center items-center relative overflow-hidden">
       {/* Header Section */}
-      <div className="absolute top-10 text-center z-20">
-        <h2 className="text-2xl font-semibold mb-4">What Our Clients Say</h2>
-        <p className="text-lg italic">"Our clients have experienced the best results with our services."</p>
+      <div className="absolute top-10 text-center z-20 ">
+        <h2 className="text-2xl font-semibold mb-4 text-dtg-900">What Our Clients Say</h2>
+        <p className="text-lg italic text-dtg-500">"Our clients have experienced the best results with our services."</p>
       </div>
 
       {/* Carousel Section */}
@@ -84,7 +84,7 @@ const TestimonialComponent = () => {
           {testimonials.map((item, index) => (
             <div
               key={item.id}
-              className={`absolute transition-transform duration-500 ease-in-out rounded-lg shadow-2xl bg-gray-800 p-6 ${item.id === activeId
+              className={`absolute transition-transform duration-500 ease-in-out rounded-lg shadow-2xl bg-dtg-900 p-6 ${item.id === activeId
                   ? "w-1/2 scale-100 z-10"
                   : "w-1/3 scale-90 z-0 opacity-50"
                 }`}
@@ -99,7 +99,7 @@ const TestimonialComponent = () => {
                   src="https://www.w3schools.com/html/mov_bbb.mp4"
                 />
               ) : (
-                <div className="text-center p-6 bg-gray-700 rounded-lg flex flex-col justify-center items-center h-64">
+                <div className="text-center text-black p-6 bg-beg rounded-lg flex flex-col justify-center items-center h-64">
                   <p className="text-lg italic">{item.comment}</p>
                   <span className="mt-4 font-bold text-sm">{`- ${item.name}`}</span>
                 </div>
@@ -112,7 +112,7 @@ const TestimonialComponent = () => {
         <div className="flex lg:hidden items-center justify-between w-full px-4">
           <button
             onClick={handlePrev}
-            className="text-white bg-gray-700 p-2 rounded-full hover:bg-red-500"
+            className="text-white bg-dtg-500 p-2 rounded-full hover:bg-dtg-900"
           >
             &lt;
           </button>
@@ -132,7 +132,7 @@ const TestimonialComponent = () => {
           </div>
           <button
             onClick={handleNext}
-            className="text-white bg-gray-700 p-2 rounded-full hover:bg-red-500"
+            className="text-white bg-dtg-500 p-2 rounded-full hover:bg-dtg-900"
           >
             &gt;
           </button>
@@ -145,7 +145,7 @@ const TestimonialComponent = () => {
           <button
             key={item.id}
             onClick={() => setActiveId(item.id)}
-            className={`w-14 h-14 rounded-full bg-purple-700 text-white flex items-center justify-center font-bold text-base cursor-pointer border-2 border-white transition-all duration-300 ease-in-out transform hover:scale-110 ${item.id === activeId ? "ring-4 ring-red-500" : ""
+            className={`w-14 h-14 rounded-full bg-dtg-500 text-white flex items-center justify-center font-bold text-base cursor-pointer border-2 border-white transition-all duration-300 ease-in-out transform hover:scale-110 ${item.id === activeId ? "ring-4 ring-dtg-900" : ""
               }`}
           >
             {item.name

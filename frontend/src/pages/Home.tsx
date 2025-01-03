@@ -2,7 +2,7 @@ import landing from "../assets/landing.mp4"
 import React from 'react';
 import GridLayout from '@/components/home_GridLayout';
 import { MarqueeDemo } from '@/components/home_MarqueeDemo';
-import '../styles/App.css';
+// import '../styles/App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../index.css';
@@ -15,7 +15,7 @@ const Home: React.FC = () => {
 
   return (
   
-    <div className="bg-gray-900">
+    <div className="bg-beg">
         <div className="relative w-full h-screen overflow-hidden">
     {/* Video Background */}
     <video 
@@ -48,9 +48,9 @@ const Home: React.FC = () => {
           <Workshops/>
         </div>
         <div>
-        <MarqueeDemo />
-        
+        <MarqueeDemo />        
         </div>
+
         <section id="testimonials" >
         <div className="w-full h-auto" >
      <TestimonialComponent />
