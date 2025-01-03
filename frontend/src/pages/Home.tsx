@@ -1,4 +1,3 @@
-
 import landing from "../assets/landing.mp4"
 import React from 'react';
 import GridLayout from '@/components/home_GridLayout';
@@ -32,11 +31,18 @@ const Home: React.FC = () => {
   </div>
       <GridLayout />
       <div className="App">
+        
+      <section id="services">
+      
+      <br />
+      <br />
+      <br />
         <h1 className="text-white text-4xl font-bold text-center">Services</h1>
         <br />
-        
           <Services/>
         <br />
+      </section>
+
         <div className="carousel mb-8 p-4">
           <h2 className="text-2xl font-bold text-white mb-4">Workshops</h2>
           <Workshops/>
@@ -45,10 +51,13 @@ const Home: React.FC = () => {
         <MarqueeDemo />
         
         </div>
+        <section id="testimonials" >
         <div className="w-full h-auto" >
-  <TestimonialComponent />
-</div>
+     <TestimonialComponent />
+   </div>
 
+        </section>
+        
 
       </div>
     </div>
