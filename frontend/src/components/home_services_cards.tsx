@@ -11,6 +11,7 @@ function Services(){
     return(
         
 <section id="services" className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+    
     <Card
         body="Do laborum sunt ut ex cupidatat exercitation."
         title="Class 8-9"
