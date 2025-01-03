@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import '../index.css';
 import Workshops from "@/components/home_workshops";
 import Services from "@/components/home_services_cards";
+import TestimonialComponent from "@/components/Testimonial";
 
 const Home: React.FC = () => {
 
@@ -42,6 +43,7 @@ const Home: React.FC = () => {
         </div>
         <div>
         <MarqueeDemo />
+        <TestimonialComponent/>
         </div>
       </div>
     </div>
