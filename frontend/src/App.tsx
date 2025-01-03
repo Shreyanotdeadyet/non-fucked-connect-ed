@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar.tsx"
 import Home  from "./pages/Home.tsx"
 import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/Footer.tsx"
+import BlogPage from "./components/BlogPage.tsx"
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUsForm />} />
+        
+        <Route path="/blogs" element={<BlogPage/>} />
       </Routes>
       <Footer/>
     </> 

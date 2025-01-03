@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Blog Container */
+.blog-container {
+  width: 100%;
+  background-color: black; /* Changed to black */
+}
+
+/* Hero Section */
+.hero-section {
+  height: 400px;
+  background: url("https://blog.teachmint.com/content/images/2020/09/Webp.net-compress-image--14--1.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Categories Section */
+.categories {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-overlay {
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card-text {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Blog Section */
+.blogs {
+  padding: 2rem;
+}
+
+.blog-card {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.blog-placeholder {
+  width: 40%;
+  background: #ddd;
+  height: 200px;
+}
+
+.blog-details {
+  padding: 1.5rem;
+  width: 60%;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.blog-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-summary {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.read-more {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.read-more:hover {
+  background-color: #0056b3;
+}

@@ -60,7 +60,7 @@ const Navbar = () => {
 
                 {/* Desktop Menu (Hidden for md and smaller screens) */}
                 <ul className="hidden md:flex space-x-5 flex-nowrap">
-                    {["Home", "Testimonials", "Services", "About", "Contact", "Blog", "Appointment"].map((item) => (
+                    {["Home", "Testimonials", "Services", "About", "Contact", "Blogs", "Appointment"].map((item) => (
                         <li key={item} className="group relative">
                             {["Testimonials", "Services"].includes(item) ? (
                                 <ScrollLink
@@ -93,7 +93,7 @@ const Navbar = () => {
             {/* Mobile Menu (Visible when hamburger is clicked) */}
             {isMenuOpen && (
                 <ul className="flex flex-col items-end md:hidden mt-4 space-y-2 bg-red-800 p-4 rounded">
-                    {["Home", "About", "Testimonials", "Services", "Contact", "Blog", "Appointment"].map((item) => (
+                    {["Home", "About", "Testimonials", "Services", "Contact", "Blogs", "Appointment"].map((item) => (
                         <li key={item} className="py-2">
                             {["Testimonials", "Services"].includes(item) ? (
                                 <ScrollLink
