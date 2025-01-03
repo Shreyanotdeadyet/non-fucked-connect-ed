@@ -84,7 +84,7 @@ const TestimonialComponent = () => {
           {testimonials.map((item, index) => (
             <div
               key={item.id}
-              className={`absolute transition-transform duration-500 ease-in-out rounded-lg shadow-2xl bg-gray-800 p-6 ${item.id === activeId
+              className={`absolute transition-transform duration-500 ease-in-out rounded-lg shadow-2xl bg-dtg-900 p-6 ${item.id === activeId
                   ? "w-1/2 scale-100 z-10"
                   : "w-1/3 scale-90 z-0 opacity-50"
                 }`}
@@ -99,7 +99,7 @@ const TestimonialComponent = () => {
                   src="https://www.w3schools.com/html/mov_bbb.mp4"
                 />
               ) : (
-                <div className="text-center p-6 bg-gray-700 rounded-lg flex flex-col justify-center items-center h-64">
+                <div className="text-center text-black p-6 bg-beg rounded-lg flex flex-col justify-center items-center h-64">
                   <p className="text-lg italic">{item.comment}</p>
                   <span className="mt-4 font-bold text-sm">{`- ${item.name}`}</span>
                 </div>

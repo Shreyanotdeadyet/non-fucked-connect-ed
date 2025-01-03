@@ -14,6 +14,7 @@ module.exports = {
 		},
 		colors: {
 			pup:'#6419cc',
+			dpup:'#3d018f',
 			beg:'#f7f0de',
 			ltg:'#00e590',
 			dtg: {
