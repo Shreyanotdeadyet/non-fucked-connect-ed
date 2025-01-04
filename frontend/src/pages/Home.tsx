@@ -2,7 +2,7 @@ import landing from "../assets/landing.mp4"
 import React from 'react';
 import GridLayout from '@/components/home_GridLayout';
 import { MarqueeDemo } from '@/components/home_MarqueeDemo';
-import '../styles/App.css';
+// import '../styles/App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../index.css';
@@ -15,9 +15,9 @@ const Home: React.FC = () => {
 
 
   return (
-<<<<<<< Updated upstream
+
   
-    <div className="bg-gray-900">
+    <div className="bg-beg">
         <div className="relative w-full h-screen overflow-hidden">
     {/* Video Background */}
     <video 
@@ -31,23 +31,7 @@ const Home: React.FC = () => {
       Your browser does not support the video tag.
     </video>
   </div>
-=======
 
-    <div className="bg-beg">
-      <div className="relative w-full h-screen overflow-hidden">
-        {/* Video Background */}
-        <video
-          className="absolute top-0 left-0 w-full h-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source src={landing} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
->>>>>>> Stashed changes
       <GridLayout />
       <div className="App">
 
@@ -64,14 +48,7 @@ const Home: React.FC = () => {
 
         <div className="carousel mb-8 p-4">
           <h2 className="text-2xl font-bold text-white mb-4">Workshops</h2>
-<<<<<<< Updated upstream
-          <Workshops/>
-        </div>
-        <div>
-        <MarqueeDemo />
-        
-        </div>
-=======
+
           <Workshops />
         </div>
 
@@ -94,9 +71,6 @@ const Home: React.FC = () => {
 </div>
 
 
-
-
->>>>>>> Stashed changes
         <section id="testimonials" >
           <div className="w-full h-auto" >
             <TestimonialComponent />
