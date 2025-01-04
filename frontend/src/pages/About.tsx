@@ -18,18 +18,23 @@ const AboutUs = () => {
   const cards = [
     {
       icon: <Target className="mb-2" />,
-      title: "Our Mission",
-      content: "Passionately helping high school students (Grades 8-12) discover their driving forces and connect with purposeful opportunities."
-    },
+      title: "Our Story",
+      content:(
+        <>
+          At Connect-Ed, we are ambitious about YOUR FUTURE.<br/>
+We understand that choosing the right educational and career path can be both exciting and overwhelming. That's why we are here to guide you every step of the way.<br/>
+Our personalized guidance has helped 300+ high school and undergraduate students traverse the complex and ever-evolving landscape of educational and career choices and win over 150 top tier universities in the US, UK, Canada and India, including the Ivy League and Russell Group
+        </>
+      ),},
     {
       icon: <Compass className="mb-2" />,
-      title: "Vision for Future",
-      content: "Enabling students to take concrete steps towards crafting purpose-driven futures through personalized guidance."
+      title: "Our Mission",
+      content: "We passionately help high school students in Grades 8 to 12 gain clarity on what drives them, match their passions with the right resources and opportunities, to enable them to take concrete steps towards crafting a purpose-driven future."
     },
     {
       icon: <BookOpen className="mb-2" />,
-      title: "Research-Backed",
-      content: "Our approach is driven by the latest research and findings, keeping you one step ahead."
+      title: "Our Approach",
+      content: "We employ a holistic approach to create a roadmap that is best-suited to your academic, personal, and financial needs. Our approach is driven by the latest research and findings because we want you to be one step ahead, all the time."
     },
     {
       icon: <Users className="mb-2" />,
