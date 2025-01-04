@@ -1,4 +1,6 @@
-import { useState } from "react";
+
+import React, { useState, useEffect } from "react";
+
 
 const testimonials = [
   {
@@ -32,6 +34,16 @@ const testimonials = [
 
 const TestimonialComponent = () => {
   const [activeId, setActiveId] = useState(Math.ceil(testimonials.length / 2));
+
+  useEffect(() => {
+    // Set an interval to automatically switch the testimonials every 5 seconds
+    const interval = setInterval(() => {
+      handleNext();
+    }, 3000);
+
+    // Cleanup the interval when the component unmounts or when a manual change is made
+    return () => clearInterval(interval);
+  }, [activeId]);
 
   const handlePrev = () => {
     setActiveId((prev) => (prev === 1 ? testimonials.length : prev - 1));

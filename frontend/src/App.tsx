@@ -8,6 +8,7 @@ import Footer from "./components/Footer.tsx"
 import BlogPage from "./components/BlogPage.tsx"
 import TestimonialComponent from "./components/testimonial.tsx"
 import ComingSoon from "./pages/ComingSoon.tsx"
+import { GlobeDemo } from "./components/home_globe.tsx"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/blogs" element={<BlogPage/>} />
         <Route path="/appointment" element={<ComingSoon/>} />
       </Routes>
+      
       <Footer/>
     </> 
   )
