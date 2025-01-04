@@ -107,6 +107,26 @@ module.exports = {
 		},
 	  },
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [require('tailwindcss-animate'),
+		
+		// function ({ addUtilities }) {
+		// 	addUtilities({
+		// 		'.scrollbar': {
+		// 		  '::-webkit-scrollbar': {
+		// 			width: '6px', // Makes the scrollbar thinner
+		// 		  },
+		// 		  '::-webkit-scrollbar-thumb': {
+		// 			backgroundColor: '#6419cc', // Purple color for the thumb
+		// 			borderRadius: '10px', // Rounded corners for the thumb
+		// 		  },
+		// 		  '::-webkit-scrollbar-track': {
+		// 			backgroundColor: '#f7f0de', // Beige color for the track
+		// 		},
+		// 	  },
+		// 	});
+		//   },
+	],
+	
   };
+  
   

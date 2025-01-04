@@ -12,11 +12,7 @@ import TestimonialComponent from "../components/testimonial";
 import globe from "../assets/globe.mp4"
 
 const Home: React.FC = () => {
-
-
   return (
-
-  
     <div className="bg-beg">
         <div className="relative w-full h-screen overflow-hidden">
     {/* Video Background */}
@@ -40,20 +36,16 @@ const Home: React.FC = () => {
           <br />
           <br />
           <br />
-          <h1 className="text-white text-4xl font-bold text-center">Services</h1>
+          <h1 className="text-teal-800 text-4xl font-bold text-center">Services</h1>
           <br />
           <Services />
           <br />
         </section>
 
         <div className="carousel mb-8 p-4">
-          <h2 className="text-2xl font-bold text-white mb-4">Workshops</h2>
+          <h2 className="text-4xl font-bold text-teal-800 mb-4 text-center">Workshops</h2>
           <Workshops/>
         </div>
-       <div>
-        <MarqueeDemo />
-        </div>
-
 
       <div className="flex w-full h-screen">
   {/* Video on the left (hidden on small screens) */}
@@ -77,10 +69,7 @@ const Home: React.FC = () => {
           <div className="w-full h-auto" >
             <TestimonialComponent />
           </div>
-
         </section>
-
-
       </div>
     </div>
   );

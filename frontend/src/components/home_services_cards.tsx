@@ -1,23 +1,26 @@
-
 import Card from '../components/Services';
-
+import image1 from "../assets/image1.jpeg";
+import image2 from "../assets/image2.jpeg";
+import image3 from "../assets/image3.jpeg";
 import { BookmarkIcon, BookOpenIcon, DocumentIcon, PencilSquareIcon } from '@heroicons/react/24/solid';
 
 function Services(){
     return(
-        
-<section id="services" className="card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 p-8">
+<section id="services" className="card-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 p-8 flex flex-wrap justify-center overflow-x-auto ">
     <Card
-        body="1. Understand career paths that revolve around your unique identity, personality, and interests so that you're applying to college knowing your options.
-2. Read, watch, write, learn, grow.
-3. Learning as a high schooler never stops; but, learning meaningfully with purpose and direction makes all the difference. 
-4. Our activities are built to strengthen thinking skills that work as a recipe for success at school, college, and beyond.
-5 .Learn how to beat procrastination to excel inside and outside the class.
-6. Apply to competitive summer programs to take a closer look at your interests through hands-on experiences.
-7.Develop communication skills to craft and deliver an elevator pitch and develop interpersonal skills vital for college."
-  
+        body={
+            <ul>
+                <li>• Understand career paths that revolve around your unique identity, personality, and interests.</li>
+                <li>• Read, watch, write, learn, and grow.</li>
+                <li>• Learning with purpose and direction makes a significant difference.</li>
+                <li>• Strengthen thinking skills to succeed at school, college, and beyond.</li>
+                <li>• Learn how to beat procrastination to excel inside and outside the class.</li>
+                <li>• Apply to competitive summer programs to gain hands-on experience.</li>
+                <li>• Develop communication skills to craft and deliver an elevator pitch.</li>
+            </ul>
+        }
         title="Class 8-9"
-       // image={image1}
+        image={image1}
         badge={{
             text: "New Post",
             filled: false,
@@ -32,13 +35,17 @@ function Services(){
         }}
     />
     <Card
-        body="1. After career exploration in previous grades, understand the synergy between your current career choices and the future job market.
-2. Deciding where to study is as important as deciding what to study. Understand educational systems and pick the right one for you.
-3. Get into top summer programs and internships to confirm your short-term and long-term interests and to start building your extracurricular profile for college.
-4. Know industry trends in fields that align with your evolving career interests.
-5. Select the right curriculum and subjects in accordance with your college & career goals and those that are required by top universities."
+        body={
+            <ul>
+                <li>• Understand the synergy between career choices and the future job market.</li>
+                <li>• Decide where to study and understand educational systems.</li>
+                <li>• Get into top summer programs and internships to confirm your interests.</li>
+                <li>• Know industry trends in fields that align with your evolving career interests.</li>
+                <li>• Select the right curriculum and subjects in accordance with college & career goals.</li>
+            </ul>
+        }
         title="Class 10"
-        //image={image2}
+        image={image2}
         badge={{
             text: "New Post",
             filled: true,
@@ -50,18 +57,22 @@ function Services(){
             type: 'primary',
             filled: true,
             icon: <PencilSquareIcon className="w-5 h-5" />,
-        }}
+            
+        }} 
     />
     <Card
-        body=" Which curriculum? Subjects? APs? SAT or ACT? Which English Language Test? The questions related to building a strong academic profile are many – we have answers to them all!
-Let your extracurricular activities set you apart from your competition – our recommendations are one-of-a-kind, and the best part? They revolve around your strengths.
-We navigate through long lists of options for you – strategizing your best chance with the best fit schools! Deciding where to study is as important as deciding what to study. UK? USA? Canada? Europe? We're here to help.
-Craft brag sheets in a way that helps your recommender help you stand out.
-Get into top summer programs and challenging learning opportunities to learn more about your intended career choice and to boost your profile.
-Find out how admissions officers view and mark essays, and learn how to make yours unique and memorable.
-"
+        body={
+            <ul>
+                <li>• Decide on the right curriculum, subjects, APs, SAT or ACT, and English Language Test.</li>
+                <li>• Let your extracurricular activities set you apart from the competition.</li>
+                <li>• Strategize your best chance with the best fit schools – UK, USA, Canada, or Europe.</li>
+                <li>• Craft brag sheets to help your recommender stand out.</li>
+                <li>• Get into top summer programs to boost your profile and learn more about your intended career.</li>
+                <li>• Learn how admissions officers mark essays and how to make yours unique.</li>
+            </ul>
+        }
         title="Class 11-12"
-        //image={image3}
+        image={image3}
         badge={{
             text: "New Post",
             filled: true,

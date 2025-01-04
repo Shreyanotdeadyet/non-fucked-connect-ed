@@ -17,7 +17,7 @@ export interface BadgeInterface {
     image?: string,
     title: string,
     subtitle?: string,
-    body: string,
+    body: React.ReactNode,
     className?: string;
     btn: ButtonInterface
   }
