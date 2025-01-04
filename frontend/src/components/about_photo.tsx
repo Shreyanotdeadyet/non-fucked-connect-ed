@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../assets/girija.png"; // Adjust the path if needed
+import hero from "../assets/girija.jpeg"; // Adjust the path if needed
 import { motion } from "framer-motion"; // Ensure Framer Motion is installed
 
 const Photo: React.FC = () => {

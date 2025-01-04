@@ -1,17 +1,22 @@
-import React from 'react';
+// import React from 'react';
 import '../styles/BlogPage.css';
 
 const BlogPage = () => {
   return (
-    <div className="blog-container bg-black">
+    <div className="bg-beg">
+      {/* blog-container */}
+
       <header className="hero-section">
+
         <div className="hero-overlay">
           
         </div>
       </header>
 
       <section className="categories">
-        <h2 className="section-title text-white">Categories</h2>
+
+        <h2 className="section-title text-dtg-900 text-xl">Categories</h2>
+
         <div className="card-container flex justify-center gap-4">
           <div
             className="card relative group cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl hover:border-slate-700 card-careers"
@@ -24,7 +29,7 @@ const BlogPage = () => {
               }}
             >
               <div className="card-overlay">
-                <p className="card-text">Careers</p>
+                <p className="text-xl font-bold">Careers</p>
               </div>
             </div>
           </div>
@@ -40,7 +45,7 @@ const BlogPage = () => {
               }}
             >
               <div className="card-overlay">
-                <p className="card-text">Essay Tips</p>
+                <p className="text-xl font-bold">Essay Tips</p>
               </div>
             </div>
           </div>
@@ -56,7 +61,7 @@ const BlogPage = () => {
               }}
             >
               <div className="card-overlay">
-                <p className="card-text">College Readiness</p>
+                <p className="text-xl font-bold">College Readiness</p>
               </div>
             </div>
           </div>
@@ -64,7 +69,9 @@ const BlogPage = () => {
       </section>
 
       <section className="blogs">
-        <h2 className="section-title text-white">Recent Blogs</h2>
+
+        <h2 className="section-title text-dtg-900 text-xl">Recent Blogs</h2>
+
         <div className="blog-card bg-white rounded-lg shadow-md p-4">
           <div
             className="blog-placeholder w-1/2 bg-cover bg-center h-32"
@@ -82,7 +89,7 @@ const BlogPage = () => {
               This is a placeholder for the blog summary. A brief description of
               what the blog covers.
             </p>
-            <button className="read-more bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="read-more bg-pup hover:bg-dpup text-white font-bold py-2 px-4 rounded">
               Read More
             </button>
           </div>
@@ -104,7 +111,7 @@ const BlogPage = () => {
               Here is another placeholder for the blog content summary. Brief
               and engaging text.
             </p>
-            <button className="read-more bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button className="read-more bg-pup hover:bg-dpup text-white font-bold py-2 px-4 rounded">
               Read More
             </button>
           </div>
