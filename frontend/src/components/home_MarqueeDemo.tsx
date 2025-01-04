@@ -84,7 +84,7 @@ const ReviewCard = ({
   
   export function MarqueeDemo() {
     return (
-      <div className="relative flex flex-col items-center justify-center w-screen max-w-full h-auto overflow-hidden rounded-lg bg-gray-900 md:shadow-xl">
+      <div className="relative flex flex-col items-center justify-center w-screen max-w-full h-auto overflow-hidden ">
         {/* Container for Marquee */}
         <div className="w-full overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
@@ -100,8 +100,10 @@ const ReviewCard = ({
             ))}
           </Marquee>
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-gray-900 to-transparent"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-900 to-transparent"></div>
+
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-#f3f3f3 to-transparent"></div>
+        {/* <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-900 to-transparent"></div> */}
+
       </div>
     );
   }
