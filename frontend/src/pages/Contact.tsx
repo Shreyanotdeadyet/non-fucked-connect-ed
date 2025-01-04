@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center">
+    <div className="min-h-screen bg-white flex items-center justify-center">
       <div className="flex flex-col md:flex-row w-full max-w-7xl p-8">
         {/* Image on the left side */}
         <div className="w-full md:w-1/2 h-[400px] md:h-[600px]">
@@ -48,8 +48,8 @@ const ContactForm: React.FC = () => {
         </div>
 
         {/* Form on the right side */}
-        <div className="w-full md:w-1/2 md:ml-8 bg-black text-white p-8 md:p-12 rounded-lg shadow-lg space-y-6 mt-6 md:mt-0">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6">Get in Touch</h2>
+        <div className="w-full md:w-1/2 md:ml-8 bg-[#6419cc] text-white p-8 md:p-12 rounded-lg shadow-lg space-y-6 mt-6 md:mt-0">
+          <h2 className="text-3xl md:text-4xl text-white font-semibold mb-6">GET IN TOUCH </h2>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <input
@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
                 value={formData.name}
                 onChange={handleChange}
                 placeholder="Name"
-                className="w-full px-6 py-4 bg-transparent border border-white rounded-md text-white focus:outline-none focus:border-pastel-blue"
+                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
               />
             </div>
 
@@ -69,7 +69,7 @@ const ContactForm: React.FC = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="Email"
-                className="w-full px-6 py-4 bg-transparent border border-white rounded-md text-white focus:outline-none focus:border-pastel-blue"
+                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
               />
             </div>
 
@@ -80,7 +80,7 @@ const ContactForm: React.FC = () => {
                 value={formData.phoneNumber}
                 onChange={handleChange}
                 placeholder="Phone Number"
-                className="w-full px-6 py-4 bg-transparent border border-white rounded-md text-white focus:outline-none focus:border-pastel-blue"
+                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
               />
             </div>
 
@@ -91,13 +91,13 @@ const ContactForm: React.FC = () => {
                 onChange={handleChange}
                 placeholder="Message goes here..."
                 rows={6}
-                className="w-full px-6 py-4 bg-transparent border border-white rounded-md text-white focus:outline-none focus:border-pastel-blue"
+                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full py-4 bg-pastel-blue text-black rounded-md hover:bg-pastel-pink focus:outline-none"
+              className="w-full py-4 bg-[#009984] text-black rounded-md hover:bg-[#00e590] focus:outline-none"
             >
               Get in Touch
             </button>

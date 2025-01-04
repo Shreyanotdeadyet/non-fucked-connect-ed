@@ -5,14 +5,18 @@ const BlogPage = () => {
   return (
     <div className="bg-beg">
       {/* blog-container */}
+
       <header className="hero-section">
+
         <div className="hero-overlay">
           
         </div>
       </header>
 
       <section className="categories">
+
         <h2 className="section-title text-dtg-900 text-xl">Categories</h2>
+
         <div className="card-container flex justify-center gap-4">
           <div
             className="card relative group cursor-pointer overflow-hidden rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl hover:border-slate-700 card-careers"
@@ -65,7 +69,9 @@ const BlogPage = () => {
       </section>
 
       <section className="blogs">
+
         <h2 className="section-title text-dtg-900 text-xl">Recent Blogs</h2>
+
         <div className="blog-card bg-white rounded-lg shadow-md p-4">
           <div
             className="blog-placeholder w-1/2 bg-cover bg-center h-32"
