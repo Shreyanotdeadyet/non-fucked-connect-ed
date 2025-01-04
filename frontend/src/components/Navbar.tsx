@@ -32,11 +32,11 @@ const Navbar = () => {
     // Determine styles based on scroll position
     const isScrolled = scrollPosition > 50;
     const navbarStyle = {
-        backgroundColor: `rgba(146, 18, 33, ${Math.min(scrollPosition / 300, 1)})`, // Original color with opacity change
+        backgroundColor: `rgba(39, 23, 37, ${Math.min(scrollPosition / 300, 1)})`, // Adjusted for theme color
         transition: "background-color 0.3s ease",
     };
 
-    const textColor = isScrolled ? "text-white" : "text-[#921221]"; // Original color
+    const textColor = isScrolled ? "text-white" : "text-[#81517c]"; // Light text color for scrolled state
 
     return (
         <nav className={`fixed w-full top-0 z-50 p-4 ${textColor}`} style={navbarStyle}>
@@ -74,7 +74,7 @@ const Navbar = () => {
                                 >
                                     {item}
                                     <span
-                                        className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-red-500 to-red-900 transition-all duration-300 group-hover:w-full"
+                                        className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#81517c] to-[#271725] transition-all duration-300 group-hover:w-full"
                                     ></span>
                                 </ScrollLink>
                             ) : (
@@ -84,7 +84,7 @@ const Navbar = () => {
                                 >
                                     {item}
                                     <span
-                                        className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-red-500 to-red-900 transition-all duration-300 group-hover:w-full"
+                                        className="absolute bottom-0 left-0 h-[2px] w-0 bg-gradient-to-r from-[#81517c] to-[#271725] transition-all duration-300 group-hover:w-full"
                                     ></span>
                                 </RouterLink>
                             )}
@@ -95,7 +95,7 @@ const Navbar = () => {
 
             {/* Mobile Menu (Visible when hamburger is clicked) */}
             {isMenuOpen && (
-                <ul className="flex flex-col items-end md:hidden mt-4 space-y-2 bg-red-800 p-4 rounded">
+                <ul className="flex flex-col items-end md:hidden mt-4 space-y-2 bg-[#271725] p-4 rounded">
                     {["Home", "About", "Testimonials", "Services", "Contact", "Blogs", "Appointment"].map((item) => (
                         <li key={item} className="py-2">
                             {["Testimonials", "Services"].includes(item) ? (
@@ -103,7 +103,7 @@ const Navbar = () => {
                                     to={item.toLowerCase()}
                                     smooth={true}
                                     duration={500}
-                                    className="text-white cursor-pointer font-bold hover:bg-red-900 px-4 py-2 rounded"
+                                    className="text-white cursor-pointer font-bold hover:bg-[#81517c] px-4 py-2 rounded"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item}
@@ -111,7 +111,7 @@ const Navbar = () => {
                             ) : (
                                 <RouterLink
                                     to={`/${item.toLowerCase()}`}
-                                    className="text-white font-bold hover:bg-red-900 px-4 py-2 rounded"
+                                    className="text-white font-bold hover:bg-[#81517c] px-4 py-2 rounded"
                                     onClick={() => setIsMenuOpen(false)}
                                 >
                                     {item}

@@ -10,7 +10,7 @@ import { BookmarkIcon, BookOpenIcon, DocumentIcon, PencilSquareIcon } from '@her
 function Services(){
     return(
         
-<section id="services" className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
+<section  className="card-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
     
     <Card
         body="Do laborum sunt ut ex cupidatat exercitation."
