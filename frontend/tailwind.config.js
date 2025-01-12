@@ -38,6 +38,17 @@ module.exports = {
 		  'pastel-pink': '#ff8ca0',
 		  background: 'hsl(var(--background))',
 		  foreground: 'hsl(var(--foreground))',
+		base:'#ffffff',
+		tg:{
+			100:'#f1fffd',
+			300:'#009984',
+			600:'#207569',
+		},
+		base2:'#fefbf6',
+		pp:{
+			100:'#6419cc',
+			300:'#3d018f',
+		},
 		  card: {
 			DEFAULT: 'hsl(var(--card))',
 			foreground: 'hsl(var(--card-foreground))',

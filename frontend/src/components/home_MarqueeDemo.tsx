@@ -84,7 +84,10 @@ const ReviewCard = ({
   
   export function MarqueeDemo() {
     return (
-      <div className="relative flex flex-col items-center justify-center w-screen max-w-full h-auto overflow-hidden ">
+      <div className="relative flex flex-col items-center justify-center w-screen max-w-full h-auto overflow-hidden bg-tg-300">
+        <h1 className="text-4xl font-bold text-center text-white py-16">
+      Univesity
+    </h1>
         {/* Container for Marquee */}
         <div className="w-full overflow-hidden">
           <Marquee pauseOnHover className="[--duration:20s]">
@@ -93,7 +96,7 @@ const ReviewCard = ({
             ))}
           </Marquee>
         </div>
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden py-16">
           <Marquee reverse pauseOnHover className="[--duration:20s]">
             {secondRow.map((review) => (
               <ReviewCard key={review.username} {...review} />
@@ -101,7 +104,7 @@ const ReviewCard = ({
           </Marquee>
         </div>
 
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-#f3f3f3 to-transparent"></div>
+        {/* <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-#f3f3f3 to-transparent"></div> */}
         {/* <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-gray-900 to-transparent"></div> */}
 
       </div>
