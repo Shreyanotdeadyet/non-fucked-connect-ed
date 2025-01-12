@@ -22,3 +22,23 @@ export interface BadgeInterface {
     btn: ButtonInterface
   }
 
+// types/calendly.d.ts
+interface CalendlyBadgeWidgetOptions {
+  url: string;
+  text: string;
+  color?: string;
+  textColor?: string;
+  branding?: boolean;
+}
+
+interface Calendly {
+  initBadgeWidget(options: CalendlyBadgeWidgetOptions): void;
+}
+
+declare global {
+  interface Window {
+    Calendly: Calendly;
+  }
+}
+
+export {};
