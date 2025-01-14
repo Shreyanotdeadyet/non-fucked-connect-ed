@@ -4,9 +4,9 @@ import Marquee from "@/components/ui/marquee";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    name: "Shreya",
+    username: "@mandekar",
+    body: "Bhai bachah lo merlo nhi karna",
     img: "https://avatar.vercel.sh/jack",
   },
   {
