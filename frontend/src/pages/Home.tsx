@@ -43,9 +43,9 @@ const Home: React.FC = () => {
       <div className="Services">
         <Services />
 
-        <div className="mt-12 md:mt-16 px-4">
+        {/* <div className="mt-12 md:mt-16 px-4"> */}
           <ResponsiveCard />
-        </div>
+        {/* </div> */}
 
         <div>
           <Workshops />
