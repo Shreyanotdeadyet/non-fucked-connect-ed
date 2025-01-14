@@ -1,0 +1,22 @@
+.perspective {
+    perspective: 1000px;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-container {
+    transform-style: preserve-3d;
+    transition: transform 0.7s ease-in-out;
+  }
+  
+  .group:hover .flip-card-container {
+    transform: rotateY(180deg); /* Flip the card horizontally on hover */
+  }
+  
+  .flip-card-back {
+    transform: rotateY(180deg) !important; /* Back side is initially rotated */
+  }
+  
+  

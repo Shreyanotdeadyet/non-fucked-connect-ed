@@ -1,72 +1,59 @@
-import landing from "../assets/landing.mp4"
-import React from 'react';
-import GridLayout from '@/components/home_GridLayout';
-import { MarqueeDemo } from '@/components/home_MarqueeDemo';
+import landing from "../assets/landing.mp4";
+import React from "react";
+import GridLayout from "@/components/home_GridLayout";
+import { MarqueeDemo } from "@/components/home_MarqueeDemo";
 //import '../styles/App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../index.css';
+import "../index.css";
 import Workshops from "@/components/home_workshops";
-import Services from "@/components/home_services_cards";
+// import Services from "@/components/home_services_cards";
 import TestimonialComponent from "../components/testimonial";
-import globe from "../assets/globe.mp4"
+// import globe from "../assets/globe.mp4";
+
+
+// import Service1 from "@/components/Service_1";
+import ResponsiveCard from "@/components/subscBox";
+import Services from "@/components/Services";
+import GroupCard from "@/components/GroupCard";
 
 const Home: React.FC = () => {
   return (
-    <div className="bg-beg">
-        <div className="relative w-full h-screen overflow-hidden">
-    {/* Video Background */}
-    <video 
-      className="absolute top-0 left-0 w-full h-full object-cover" 
-      autoPlay 
-      loop 
-      muted 
-      playsInline
-    >
-      <source src={landing} type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+    <div className="bg-base">
+      <div className="relative w-full h-screen overflow-hidden">
+        {/* Video Background */}
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src={landing} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
-      <GridLayout />
-      <div className="App">
+      <div className="Why">
+        <GridLayout />
+        <GroupCard />
+      </div>
 
-        <section id="services">
+      <div className="Services">
+        <Services />
 
-          <br />
-          <br />
-          <br />
-          <h1 className="text-teal-800 text-4xl font-bold text-center">Services</h1>
-          <br />
-          <Services />
-          <br />
-        </section>
+        {/* <div className="mt-12 md:mt-16 px-4"> */}
+          <ResponsiveCard />
+        {/* </div> */}
 
-        <div className="carousel mb-8 p-4">
-          <h2 className="text-4xl font-bold text-teal-800 mb-4 text-center">Workshops</h2>
-          <Workshops/>
+        <div>
+          <Workshops />
         </div>
 
-      <div className="flex w-full h-screen">
-  {/* Video on the left (hidden on small screens) */}
-  <div className="w-2/5 h-full hidden md:flex items-center justify-center overflow-hidden">
-    <video
-      className="w-full h-full rounded-lg" // rounded class for the video
-      src={globe}
-      autoPlay
-      loop
-      muted
-    ></video>
-  </div>
-  {/* MarqueeDemo on the right */}
-  <div className="w-full md:w-3/5 h-full flex items-center">
-    <MarqueeDemo />
-  </div>
-</div>
+        <MarqueeDemo />
 
-
-        <section id="testimonials" >
-          <div className="w-full h-auto" >
+        <section id="testimonials">
+          <div className="w-full h-auto">
             <TestimonialComponent />
           </div>
         </section>

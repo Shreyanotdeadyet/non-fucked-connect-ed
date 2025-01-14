@@ -63,7 +63,7 @@ const Navbar = () => {
 
                 {/* Desktop Menu (Hidden for md and smaller screens) */}
                 <ul className="hidden md:flex space-x-5 flex-nowrap">
-                    {["Home", "Testimonials", "Services", "About", "Contact", "Blogs", "Appointment"].map((item) => (
+                    {["Home","Services", "Testimonials", "About", "Contact", "Blogs", "Appointment"].map((item) => (
                         <li key={item} className="group relative">
                             {["Testimonials", "Services"].includes(item) ? (
                                 <ScrollLink
