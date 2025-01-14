@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Target, Compass, BookOpen, Users } from "lucide-react"; // Updated import for lucide-react icons
 import WhyUsSection from '../components/about_whyus';
 import Team from "../components/about_team";
+import AboutUsSection from "@/components/about_hero";
 const AboutUs = () => {
   const words = ["Empower", "Inspire", "Guide"];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -45,9 +46,9 @@ Our personalized guidance has helped 300+ high school and undergraduate students
 
   return (
     <>
-      <div className="bg-white text-[#6419cc] min-h-screen flex flex-col items-center justify-center font-helvetica text-center px-4">
+      {/* <div className="bg-white text-[#6419cc] min-h-screen flex flex-col items-center justify-center font-helvetica text-center px-4"> */}
         {/* Initial Text (Landing Page) */}
-        <h1 className="font-helvetica text-[#6419cc] text-6xl md:text-7xl lg:text-9xl font-bold mb-4">WE</h1>
+        {/* <h1 className="font-helvetica text-[#6419cc] text-6xl md:text-7xl lg:text-9xl font-bold mb-4">WE</h1>
         <motion.h2
           className="text-6xl font-helvetica md:text-7xl lg:text-9xl font-extrabold transition-all duration-1000 animate-fade-in-scale text-glow"
           key={currentWordIndex}
@@ -57,11 +58,13 @@ Our personalized guidance has helped 300+ high school and undergraduate students
         >
           {words[currentWordIndex]}
         </motion.h2>
-        <h1 className="font-helvetica text-[#6419cc] text-6xl md:text-7xl lg:text-9xl font-bold mt-4">THE NEXT GENERATION</h1>
+        <h1 className="font-helvetica text-[#6419cc] text-6xl md:text-7xl lg:text-9xl font-bold mt-4">THE NEXT GENERATION</h1> */}
 
         {/* Space between Text and Cards */}
-        <div className="my-12"></div>
-      </div>
+        {/* <div className="my-12"></div>
+      </div> */}
+
+      <AboutUsSection/>
 
       {/* Cards Section */}
       <div className="w-full bg-[#009984] text-[#6419cc] px-4 pb-8 mt-0">
