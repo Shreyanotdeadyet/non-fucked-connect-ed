@@ -9,7 +9,6 @@ import BlogPage from "./components/BlogPage.tsx"
 import TestimonialComponent from "./components/testimonial.tsx"
 import ComingSoon from "./pages/ComingSoon.tsx"
 import { GlobeDemo } from "./components/home_globe.tsx"
-
 function App() {
   return (
     <> 

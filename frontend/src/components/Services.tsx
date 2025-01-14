@@ -1,126 +1,105 @@
-import { CardInterface, BadgeInterface, ButtonInterface } from "../types";
-// import { DocumentIcon, PencilSquareIcon, BookmarkIcon } from '@heroicons/react/outline';
-import image1 from "../assets/image1.jpeg";
-import image2 from "../assets/image2.jpeg";
-import image3 from "../assets/image3.jpeg";
-const Badge = ({ text, filled }: BadgeInterface) => {
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { initialTabs as tabs } from "@/components/serv_data"; // Ensure the path to ingredients is correct
+
+import servbg from "@/assets/image1.jpeg";
+
+const Services = () => {
+  const [selectedTab, setSelectedTab] = useState(tabs[0]);
+
   return (
-    <small
-      className={`py-1 px-3 text-xs w-3/12 rounded-sm ${filled ? 'bg-[#00e590] text-white' : 'border border-[#00e590] text-[#00e590]'}`}
-    >
-      {text}
-    </small>
-  );
-};
+    <section id="services" className="relative w-full bg-cover bg-center bg-no-repeat py-16" style={{ backgroundImage: `url(${servbg})` }}>
+      {/* Enhanced Overlay for a Darker Background */}
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
-const Button = ({ text, filled, type, href, icon }: ButtonInterface) => {
-  return (
-    <a
-      href={href}
-      className={`inline-flex justify-center gap-5 py-2.5 px-2.5 w-5/12 rounded-sm text-sm transition duration-500 ${filled ? 'bg-[#6419cc] text-[#f7f0de] border-[#009984]' : 'text-[#009984] border-[#009984]'} ${type === 'primary' ? 'hover:bg-[#009984] hover:text-[#f7f0de] hover:border-[#009984]' : ''}`}
->
-      <span>{text}</span>
-      {icon}
-    </a>
-  );
-};
+      {/* Content Section */}
+      <div className="relative w-full max-w-5xl mx-auto p-8 border border-tg-100 rounded-xl bg-white bg-opacity-100 backdrop-blur-md z-10">
+        
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-center text-black mb-12">Services</h2>
 
-// const Card = ({ body, btn, title, badge, image, indicator }: CardInterface) => {
-//   return (
-//     <article className="relative flex flex-col bg-amber-50 p-6 sm:p-8 mx-8 w-full sm:w-96 md:w-[28rem] lg:w-[32rem] h-auto max-h-[32rem] rounded-lg border-emerald-950 shadow-2xl overflow-hidden transform transition-all duration-300">
-//       {/* Badge Section */}
-//       {badge && (
-//         <div className="absolute top-4 left-4">
-//           <Badge text={badge.text} filled={badge.filled} />
-//         </div>
-//       )}
+        {/* Navigation */}
+        <nav className="mb-12">
+          <ul className="flex justify-evenly">
+            {tabs.map((item, index) => (
+              <li
+                key={item.label}
+                className={`cursor-pointer py-4 px-8 rounded-lg transition-all duration-200 text-xl ${item === selectedTab
+                    ? "font-semibold bg-pp-300 text-white shadow-md"
+                    : "text-gray-600 bg-pink-100 hover:bg-pp-100"
+                  }`}
+                onClick={() => setSelectedTab(item)}
+              >
+                {/* Show custom labels for small screens */}
+                <span className="block md:hidden">
+                  {index <= 5
+                    ? "1st-5th"
+                    : index <= 8
+                      ? "6th-8th"
+                      : "9th-12th"}
+                </span>
 
-//       {/* Content Wrapper */}
-//       <div className="flex flex-col h-full pt-6 sm:pt-8">
-//         {/* Scrollable Middle Section */}
-//         <div className="flex-1 overflow-auto scrollbar-thin scrollbar-thumb-teal-300 scrollbar-track-teal-300 pr-2">
-//           {/* Image Section */}
-//           {image && (
-//             <img
-//               src={image}
-//               alt="Card Image"
-//               className="w-full h-52 object-cover rounded-md mb-4"
-//             />
-//           )}
+                {/* Show original labels for medium and larger screens */}
+                <span className="hidden md:block">
+                  {`${item.icon} ${item.label}`}
+                </span>
 
-//           {/* Title */}
-//           <h3 className="text-base md:text-lg lg:text-xl font-bold text-[#6419cc] mb-2">
-//             {title}
-//           </h3>
+                {item === selectedTab ? (
+                  <motion.div
+                    className="w-full h-1 bg-white mt-2 rounded"
+                    layoutId="underline"
+                  />
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-//           {/* Body Content */}
-//           <div className="text-sm md:text-base text-[#009984] leading-relaxed">
-//             {body}
-//           </div>
-//         </div>
-
-//         {/* Button Section */}
-//         <div className="mt-4">
-//           <Button
-//             filled={btn.filled}
-//             type={btn.type}
-//             text={btn.text}
-//             href={btn.href}
-//             icon={btn.icon}
-//           />
-//         </div>
-//       </div>
-//     </article>
-//   );
-// };
-const Card = ({ body, btn, title, badge, image, indicator }: CardInterface) => {
-  return (
-    <article className="relative flex flex-col bg-amber-50 p-6 sm:p-6 mx-4 sm:mx-8 w-full sm:w-96 md:w-[28rem] lg:w-[32rem] min-w-[280px] h-auto max-h-[32rem] rounded-lg border-emerald-950 shadow-2xl overflow-hidden transform transition-all duration-300">
-      {/* Badge Section */}
-      {badge && (
-        <div className="absolute top-2 left-4">
-          <Badge text={badge.text} filled={badge.filled} />
-        </div>
-      )}
-
-      {/* Content Wrapper */}
-      <div className="flex flex-col h-full pt-4 sm:pt-6">
-        {/* Scrollable Middle Section */}
-        <div className="flex-1 overflow-auto scrollbar-thin scrollbar-thumb-teal-300 scrollbar-track-teal-300 pr-2">
-          {/* Image Section */}
-          {image && (
-            <img
-              src={image}
-              alt="Card Image"
-              className="w-full h-52 sm:h-52 object-cover rounded-md mb-4"
+        {/* Main Content */}
+        <main className="flex flex-col items-center space-y-12 md:space-y-0 md:flex-row">
+          {/* Text Section */}
+          <div className="flex-1 text-left max-w-lg">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={selectedTab ? selectedTab.label : "empty"}
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -20, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="text-2xl font-bold text-gray-800"
+              >
+                {selectedTab ? selectedTab.label : "Default Text"}
+              </motion.div>
+            </AnimatePresence>
+            <div
+              className="mt-6 text-lg text-gray-600 break-words overflow-auto"
+              dangerouslySetInnerHTML={{
+                __html: selectedTab
+                  ? selectedTab.description
+                  : "Select a tab to see details.",
+              }}
             />
-          )}
-
-          {/* Title */}
-          <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#6419cc] mb-2">
-            {title}
-          </h3>
-
-          {/* Body Content */}
-          <div className="text-sm sm:text-base text-[#009984] leading-relaxed">
-            {body}
           </div>
-        </div>
 
-        {/* Button Section */}
-        <div className="mt-4">
-          <Button
-            filled={btn.filled}
-            type={btn.type}
-            text={btn.text}
-            href={btn.href}
-            icon={btn.icon}
-          />
-        </div>
+          {/* Image Section */}
+          <div className="flex-1 flex justify-center items-center">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={selectedTab ? selectedTab.label : "default"}
+                src={selectedTab.image} // Ensure each tab has an `image` property
+                alt={selectedTab.label}
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="w-94 h-94 object-cover rounded-lg shadow-xl hidden md:block"
+              />
+            </AnimatePresence>
+          </div>
+        </main>
       </div>
-    </article>
+    </section>
   );
 };
 
-
-export default Card;
+export default Services;

@@ -4,8 +4,8 @@ import image3 from "../assets/image3.jpeg";
 
 export const initialTabs = [
   {
-    label: "Elementary School (Grades 0 to 5)",
-    icon: "👶📚🏫",
+    label: "Grades 0 to 5",
+    icon: "🏫",
     image: image1, // Replace with the actual image path
     description: `
       In elementary school, we focus on foundational exposure to the world of work and essential developmental skills.
@@ -22,8 +22,8 @@ export const initialTabs = [
     `,
   },
   {
-    label: "Middle School (Grades 6 to 8)",
-    icon: "👤🎯📒",
+    label: "Grades 6 to 8",
+    icon: "💡",
     image: image2, // Replace with the actual image path
     description: `
       During middle school, students should explore their interests independently and build reflective habits.
@@ -38,8 +38,8 @@ export const initialTabs = [
     `,
   },
   {
-    label: "Secondary/High School (Grades 9 to 12)",
-    icon: "🎓👤💡",
+    label: "Grades 9 to 12",
+    icon: "🎓",
     image: image3, // Replace with the actual image path
     description: `
       High school focuses on career readiness and understanding life after school.
