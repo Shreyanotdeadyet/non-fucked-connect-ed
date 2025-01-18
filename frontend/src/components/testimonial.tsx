@@ -66,7 +66,7 @@ const TestimonialComponent = () => {
     <div className="h-screen text-white flex flex-col justify-center items-center relative overflow-hidden">
       {/* Header Section */}
       <div className="absolute top-10 text-center z-20 ">
-        <h2 className="text-2xl font-semibold mb-4 text-dtg-900">What Our Clients Say</h2>
+        <h2 className="hd-ft mb-4">What Our Clients Say</h2>
         <p className="text-lg italic text-dtg-500">"Our clients have experienced the best results with our services."</p>
       </div>
 
@@ -92,8 +92,8 @@ const TestimonialComponent = () => {
                 />
               ) : (
                 <div className="text-center text-black p-6 bg-beg rounded-lg flex flex-col justify-center items-center h-64 overflow-y-auto max-h-64">
-                  <p className="text-lg italic overflow-auto">{item.comment}</p>
-                  <span className="mt-4 font-bold text-sm">{item.name}</span>
+                  <p className="nom-ft overflow-auto">{item.comment}</p>
+                  <span className="mt-4 nom-b-ft">{item.name}</span>
                 </div>
               )}
             </div>
@@ -137,7 +137,7 @@ const TestimonialComponent = () => {
           <button
             key={item.id}
             onClick={() => setActiveId(item.id)}
-            className={`w-14 h-14 rounded-full bg-dtg-500 text-white flex items-center justify-center font-bold text-base cursor-pointer border-2 border-white transition-all duration-300 ease-in-out transform hover:scale-110 ${item.id === activeId ? "ring-4 ring-dtg-900" : ""
+            className={`nom-ft w-14 h-14 rounded-full bg-dtg-500 flex items-center justify-center cursor-pointer border-2 border-white transition-all duration-300 ease-in-out transform hover:scale-110 ${item.id === activeId ? "ring-4 ring-dtg-900" : ""
               }`}
           >
             {item.name

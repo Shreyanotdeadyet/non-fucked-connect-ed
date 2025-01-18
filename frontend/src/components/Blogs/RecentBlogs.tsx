@@ -28,7 +28,7 @@ const RECENT_BLOGS = [
 function RecentBlogs() {
   return (
     <section className="mb-16">
-      <h2 className="text-3xl font-bold mb-8 text-gray-900">Recent Articles</h2>
+      <h2 className="hd-ft mb-8">Recent Articles</h2>
       <div className="space-y-8">
         {RECENT_BLOGS.map((blog) => (
           <BlogCard key={blog.title} {...blog} />

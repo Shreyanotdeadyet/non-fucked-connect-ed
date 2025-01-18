@@ -15,7 +15,7 @@ function BlogCard({ title, intro, author, readTime, image }: BlogCardProps) {
 
   return (
     <>
-      <div className="bg-beige-50 rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] border border-beige-200">
+      <div className="rounded-xl shadow-md overflow-hidden transform transition-transform hover:scale-[1.02] border border-slate-500">
         <div className="md:flex">
           <div className="md:flex-shrink-0">
             <img

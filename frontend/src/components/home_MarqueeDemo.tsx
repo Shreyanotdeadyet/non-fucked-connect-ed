@@ -85,7 +85,7 @@ const ReviewCard = ({
   export function MarqueeDemo() {
     return (
       <div className="relative flex flex-col items-center justify-center w-screen max-w-full h-auto overflow-hidden bg-tg-300">
-        <h1 className="text-4xl font-bold text-center text-white py-16">
+        <h1 className="hd-ft text-center py-16">
       Univesity
     </h1>
         {/* Container for Marquee */}

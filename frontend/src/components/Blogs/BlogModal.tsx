@@ -56,16 +56,16 @@ function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
           </div>
 
           {/* Blog metadata */}
-          <div className="flex items-center text-sm text-gray-500 mb-4">
-            <span className="mr-2 font-medium">By {blog.author}</span>
-            <span>•</span>
-            <span className="ml-2">{blog.readTime} read</span>
+          <div className="flex items-center nom-ft mb-4">
+            <span className="mr-2 nom-ft">By {blog.author}</span>
+            <span className="mr-2 nom-ft">•</span>
+            <span className="mr-2 nom-ft">{blog.readTime} read</span>
           </div>
 
           {/* Blog content */}
           <div className="prose max-w-none">
             {fullContent.split('\n\n').map((paragraph, index) => (
-              <p key={index} className="text-gray-700 mb-4 leading-relaxed">
+              <p key={index} className="nom-ft mb-4 leading-relaxed">
                 {paragraph}
               </p>
             ))}

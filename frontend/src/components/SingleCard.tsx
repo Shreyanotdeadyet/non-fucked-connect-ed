@@ -61,7 +61,7 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
 
   {/* Bottom Section - Text with White Background */}
   <div className="w-full h-1/3 bg-white flex justify-center items-center rounded-b-xl px-4">
-    <p className="text-lg font-bold text-black text-center">{frontText}</p>
+    <p className="nom-b-ft text-center">{frontText}</p>
   </div>
 </div>
 
@@ -78,8 +78,8 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
               <h3 className="text-xl font-bold mb-4 group-hover:text-opacity-80 transition-opacity">
                 {backSideContent[cardIndex - 1].title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">{backSideContent[cardIndex - 1].text}</p>
-              <ul className="text-sm text-gray-500 space-y-2 mt-4">
+              <p className="nom-ft leading-relaxed">{backSideContent[cardIndex - 1].text}</p>
+              <ul className="nom-ft space-y-2 mt-4">
                 {backSideContent[cardIndex - 1].features.map((feature, index) => (
                   <li key={index} className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-gray-500 rounded-full mr-2"></div>

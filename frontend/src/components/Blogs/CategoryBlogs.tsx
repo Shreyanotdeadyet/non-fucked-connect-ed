@@ -17,10 +17,10 @@ function CategoryBlogs({ category, onClose }: CategoryBlogsProps) {
       <div className="min-h-screen bg-white flex flex-col">
         <div className="max-w-4xl mx-auto px-4 py-8 flex-grow">
           <div className="flex justify-between items-center mb-6 mt-12">
-            <h2 className="text-2xl font-bold text-gray-900">{category}</h2>
+            <h2 className="hd-ft">{category}</h2>
             <button
               onClick={onClose}
-              className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors"
+              className="px-4 py-3 bg-gray-900 nom-ft rounded-xl hover:bg-gray-800 transition-colors"
             >
               Close
             </button>

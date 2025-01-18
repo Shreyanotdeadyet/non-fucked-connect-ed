@@ -23,7 +23,7 @@ function CategorySection() {
   return (
     <section className="mb-16">
       {/* <TypewriterText text="Categories" /> */}
-      <h2 className="text-3xl font-bold mb-8 text-gray-900">Categories</h2>
+      <h2 className="hd-ft mb-8">Categories</h2>
       
       <div className="flex flex-col lg:flex-row justify-center items-center gap-4">
   {CATEGORIES.map((category) => (
@@ -39,7 +39,7 @@ function CategorySection() {
         }}
       />
       <div className="absolute bottom-0 w-full bg-white/60 backdrop-blur-sm p-4 text-center">
-        <p className="text-xl font-bold text-gray-900">{category.title}</p>
+        <p className="nom-b-ft">{category.title}</p>
       </div>
     </div>
   ))}

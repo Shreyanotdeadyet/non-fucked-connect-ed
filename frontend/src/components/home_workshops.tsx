@@ -144,7 +144,7 @@ const Workshops: React.FC = () => {
 
   return (
     <div className="w-full h-screen bg-tg-100 flex flex-col justify-center items-center">
-      <h1 className="text-4xl font-bold text-center text-tg-600 mb-20">Workshops</h1>
+      <h1 className="hd-ft text-center mb-20">Workshops</h1>
 
       <div className="max-w-7xl w-full">
         <Slider {...settings}>

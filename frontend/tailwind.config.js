@@ -8,6 +8,8 @@ module.exports = {
 		fontFamily: {
 		  dmserif: ['"DM Serif Text"', 'serif'],
 		  lora: ['Lora', 'serif'],
+		  robo1: ["Roboto", 'serif'],
+		  robo2: ["Roboto Slab", 'serif'],	
 		},
 		borderRadius: {
 		  lg: 'var(--radius)',

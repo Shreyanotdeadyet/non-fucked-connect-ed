@@ -16,7 +16,7 @@ const Services = () => {
       <div className="relative w-full max-w-6xl mx-auto p-8 border border-tg-100 rounded-xl bg-white bg-opacity-100 backdrop-blur-md z-10">
         
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-black mb-12">Services</h2>
+        <h2 className="hd-ft text-center mb-12">Services</h2>
 
         {/* Navigation */}
         <nav className="mb-12">
@@ -25,8 +25,8 @@ const Services = () => {
               <li
                 key={item.label}
                 className={`cursor-pointer py-4 px-8 rounded-lg transition-all duration-200 text-xl ${item === selectedTab
-                    ? "font-semibold bg-pp-300 text-white shadow-md"
-                    : "text-gray-600 bg-pink-100 hover:bg-pp-100"
+                    ? "font-semibold bg-pp-300 nom-b-ft shadow-md"
+                    : "nom-b-ft bg-pink-100 hover:bg-pp-100"
                   }`}
                 onClick={() => setSelectedTab(item)}
               >
@@ -66,13 +66,13 @@ const Services = () => {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -20, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="text-2xl font-bold text-gray-800"
+                className="nom-b-ft"
               >
                 {selectedTab ? selectedTab.label : "Default Text"}
               </motion.div>
             </AnimatePresence>
             <div
-              className="mt-6 text-lg text-gray-600 break-words overflow-auto"
+              className="mt-6 nom-ft break-words overflow-auto"
               dangerouslySetInnerHTML={{
                 __html: selectedTab
                   ? selectedTab.description

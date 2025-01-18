@@ -56,7 +56,7 @@ function StatNumber({ end, label, icon: Icon }: { end: number; label: string; ic
         <Icon className="w-12 h-12 text-blue-600" />
       </div>
       <div className="text-4xl font-bold text-gray-900 mb-2">{count}+</div>
-      <div className="text-gray-600">{label}</div>
+      <div className="nom-ft">{label}</div>
     </div>
   );
 }

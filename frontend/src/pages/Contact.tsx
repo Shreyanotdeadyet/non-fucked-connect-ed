@@ -1,108 +1,165 @@
-import React, { useState } from 'react';
-import Contact from "../assets/peakpx.jpg";
-
-interface FormData {
-  name: string;
-  email: string;
-  phoneNumber: string;
-  message: string;
-}
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    phoneNumber: '',
-    message: ''
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value
+      [name]: value,
     });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log(formData);
-    // 7249418286
-    const whatsappNumber = '8452898618'; // Add your WhatsApp number with country code
-    const message = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phoneNumber}\nMessage: ${formData.message}`;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(message)}`;
+  const handleEmailSubmit = () => {
+    emailjs
+      .send(
+        "service_eh3vaoq", // Replace with your EmailJS Service ID
+        "template_mxl0ame", // Replace with your EmailJS Template ID
+        {
+          user_name: formData.name,
+          user_email: formData.email,
+          user_phone: formData.phoneNumber,
+          message: formData.message,
+        },
+        "l5X2EfqDur2WU5VfJ" // Replace with your EmailJS User ID
+      )
+      .then(
+        () => alert("Email sent successfully!"),
+        () => alert("Failed to send email. Please try again.")
+      );
+  };
 
-    window.open(whatsappUrl, '_blank');
+  const handleWhatsAppSubmit = () => {
+    const whatsappNumber = "8452898618"; // Replace with your WhatsApp number
+    const message = `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phoneNumber}\nMessage: ${formData.message}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center">
-      <div className="flex flex-col md:flex-row w-full max-w-7xl p-8">
-        {/* Image on the left side */}
-        <div className="w-full md:w-1/2 h-[400px] md:h-[600px]">
-          <img
-            src={Contact} // Add your image path here
-            alt="Contact"
-            className="w-full h-full object-cover rounded-lg"
-          />
+    <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center py-16 lg:py-24"
+      style={{
+        backgroundImage: "linear-gradient(to bottom right, #eee4f5, #e6fffc)",
+        fontFamily: "'Open Sans', sans-serif",
+      }}
+    >
+      <div className="flex flex-col lg:flex-row items-start justify-center lg:items-center gap-12 px-6 sm:px-12 lg:px-24 max-w-7xl w-full">
+        {/* Left Section */}
+        <div className="lg:w-1/2 flex flex-col justify-center space-y-8">
+          <h1 className="hd-ft">
+            Get started with Contact Us.
+          </h1>
+          <p className="nom-b-ft italic">
+            Achieve Your Dreams with the Right Guidance!
+          </p>
+
+          <div className="mt-8 bg-white shadow-md rounded-xl p-6">
+            <blockquote className="nom-ft italic">
+              "Was paying a lot in fees with JPM, I like the pricing transparency
+              and feature offerings."
+            </blockquote>
+            <div className="flex items-center mt-4">
+              <img
+                src="https://via.placeholder.com/40"
+                alt="Profile"
+                className="w-10 h-10 rounded-full"
+              />
+              <div className="ml-4">
+                <p className="nom-ft">Girija Kale</p>
+                <p className="nom-ft">Founder @Connect-Ed</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Form on the right side */}
-        <div className="w-full md:w-1/2 md:ml-8 bg-[#6419cc] text-white p-8 md:p-12 rounded-lg shadow-lg space-y-6 mt-6 md:mt-0">
-          <h2 className="text-3xl md:text-4xl text-white font-semibold mb-6">GET IN TOUCH </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Name"
-                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
-              />
-            </div>
-
-            <div>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email"
-                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
-              />
-            </div>
-
-            <div>
-              <input
-                type="tel"
-                name="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                placeholder="Phone Number"
-                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
-              />
-            </div>
-
-            <div>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Message goes here..."
-                rows={6}
-                className="w-full px-6 py-4 bg-transparent border border-[#009984] rounded-md text-[#009984] focus:outline-none focus:border-[#009984]"
-              />
-            </div>
-
+        {/* Right Section */}
+        <form
+          onSubmit={(e) => e.preventDefault()}
+          className="w-full lg:w-1/2 bg-white bg-opacity-90 py-10 px-8 shadow-lg flex flex-col gap-6 rounded-xl"
+        >
+          <div className="w-full">
+            <label className="nom-ft block mb-1">First Name</label>
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              placeholder="Enter your name"
+              className="w-full px-4 py-2 border border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+          <div className="w-full">
+            <label className="nom-ft block mb-1">Email</label>
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Enter your email"
+              className="w-full px-4 py-2 border border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+          <div className="w-full">
+            <label className="nom-ft block mb-1">Phone Number</label>
+            <input
+              type="tel"
+              name="phoneNumber"
+              value={formData.phoneNumber}
+              onChange={handleChange}
+              placeholder="Enter your phone number"
+              className="w-full px-4 py-2 border border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+          <div className="w-full">
+            <label className="nom-ft block mb-1">Message</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="How can we help you?"
+              rows={5}
+              className="w-full px-4 py-2 border border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <button
-              type="submit"
-              className="w-full py-4 bg-[#009984] text-black rounded-md hover:bg-[#00e590] focus:outline-none"
+              type="button"
+              onClick={handleWhatsAppSubmit}
+              className="nom-ft flex items-center justify-center w-full sm:w-1/2 px-6 py-3 bg-pup hover:bg-dpup focus:outline-none rounded-xl"
             >
-              Get in Touch
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp"
+                className="w-6 h-6 mr-2"
+              />
+              WhatsApp
             </button>
-          </form>
-        </div>
+            <button
+              type="button"
+              onClick={handleEmailSubmit}
+              className="nom-ft flex items-center justify-center w-full sm:w-1/2 px-6 py-3 bg-pup hover:bg-purple-600 focus:outline-none rounded-xl"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+                alt="Email"
+                className="w-6 h-6 mr-2"
+              />
+              Email
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

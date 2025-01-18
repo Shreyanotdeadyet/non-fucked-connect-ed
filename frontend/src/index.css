@@ -38,9 +38,7 @@
  
     display: flex !important;
     justify-content: center;
-    align-items: center;
-  
-  
+    align-items: center; 
 }
 
 .slick-dots li.slick-active button:before {
@@ -57,3 +55,16 @@
   }
 } 
 
+.nom-ft {
+  @apply font-robo1 font-bold text-red-900 text-xl 
+  /* text-slate-900 */
+}
+
+.nom-b-ft{
+  /*heading thoda bold */
+  @apply font-robo2 font-black text-blue-900 text-2xl
+}
+.hd-ft{
+  /* heading only */
+  @apply font-robo2 text-5xl font-bold text-pink-950
+}
