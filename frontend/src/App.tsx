@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar.tsx"
 import Home  from "./pages/Home.tsx"
 import { Routes, Route } from 'react-router-dom';
 import Footer from "./components/Footer.tsx"
-import BlogPage from "./components/BlogPage.tsx"
+import BlogPage from "./pages/BlogPage.tsx"
 import TestimonialComponent from "./components/testimonial.tsx"
 import ComingSoon from "./pages/ComingSoon.tsx"
 import { GlobeDemo } from "./components/home_globe.tsx"

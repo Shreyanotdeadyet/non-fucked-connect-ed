@@ -5,12 +5,6 @@ module.exports = {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 	  extend: {
-		color:{
-        beige : '#f7f0de',
-		purple : '#6419cc',
-		lteal: '#00e590',
-		dteal: '#009984', 
-		},
 		fontFamily: {
 		  dmserif: ['"DM Serif Text"', 'serif'],
 		  lora: ['Lora', 'serif'],
@@ -21,6 +15,10 @@ module.exports = {
 		  sm: 'calc(var(--radius) - 4px)',
 		},
 		colors: {
+			beige : '#f7f0de',
+			purple : '#6419cc',
+			lteal: '#00e590',
+			dteal: '#009984', 
 			pup:'#6419cc',
 
 			dpup:'#3d018f',
