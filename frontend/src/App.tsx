@@ -13,14 +13,19 @@ function App() {
   return (
     <> 
       <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/about" element={<AboutUs />} />
-        <Route path="/contact" element={<ContactUsForm />} />
-        <Route path="/blogs" element={<BlogPage/>} />
-        <Route path="/appointment" element={<ComingSoon/>} />
-      </Routes>
+        
+      <div className="main-content ">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Home" element={<Home />} />
+      <Route path="/about" element={<AboutUs />} />
+      <Route path="/contact" element={<ContactUsForm />} />
+      <Route path="/blogs" element={<BlogPage />} />
+      <Route path="/appointment" element={<ComingSoon />} />
+    </Routes>
+  </div>
+
+   
       
       <Footer/>
     </> 
@@ -28,3 +33,28 @@ function App() {
 }
 
 export default App
+
+// import { useEffect } from 'react';
+// import Intro from './components/Intro';
+// // import Description from '../components/Description';
+// // import Projects from '../components/Projects';
+
+// export default function Home() {
+
+//   useEffect( () => {
+//     (
+//       async () => {
+//           const LocomotiveScroll = (await import('locomotive-scroll')).default
+//           const locomotiveScroll = new LocomotiveScroll();
+//       }
+//     )()
+//   }, [])
+
+//   return (
+//       <main >
+//         <Intro />
+//         {/* <Description />
+//         <Projects /> */}
+//       </main>
+//   )
+// }

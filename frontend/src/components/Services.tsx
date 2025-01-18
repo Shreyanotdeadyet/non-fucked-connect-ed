@@ -13,7 +13,7 @@ const Services = () => {
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
       {/* Content Section */}
-      <div className="relative w-full max-w-5xl mx-auto p-8 border border-tg-100 rounded-xl bg-white bg-opacity-100 backdrop-blur-md z-10">
+      <div className="relative w-full max-w-6xl mx-auto p-8 border border-tg-100 rounded-xl bg-white bg-opacity-100 backdrop-blur-md z-10">
         
         {/* Heading */}
         <h2 className="text-4xl font-bold text-center text-black mb-12">Services</h2>

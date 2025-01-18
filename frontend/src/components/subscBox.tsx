@@ -1,4 +1,4 @@
-const ResponsiveCard = () => {
+const PersonalizedProg = () => {
   return (
     <div className="w-full bg-gray-100 flex flex-col items-center justify-center py-16">
       {/* Centered Heading */}
@@ -64,4 +64,4 @@ const ResponsiveCard = () => {
   );
 };
 
-export default ResponsiveCard;
+export default PersonalizedProg;

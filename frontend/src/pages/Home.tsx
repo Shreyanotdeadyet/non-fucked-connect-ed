@@ -1,5 +1,5 @@
 import landing from "../assets/landing.mp4";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import GridLayout from "@/components/home_GridLayout";
 import { MarqueeDemo } from "@/components/home_MarqueeDemo";
 //import '../styles/App.css';
@@ -16,11 +16,28 @@ import TestimonialComponent from "../components/testimonial";
 import ResponsiveCard from "@/components/subscBox";
 import Services from "@/components/Services";
 import GroupCard from "@/components/GroupCard";
+import PersonalizedProg from "@/components/subscBox";
 
 const Home: React.FC = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > window.innerHeight * 0.2) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="bg-base">
-      <div className="relative w-full h-screen overflow-hidden">
+      {/* <div className="fixed w-full h-screen overflow-hidden"> */}
+      <div className="home-video-container">
         {/* Video Background */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover"
@@ -32,18 +49,25 @@ const Home: React.FC = () => {
           <source src={landing} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+        <div
+          className={`absolute inset-0 bg-black transition-opacity duration-500 ${
+            isScrolled ? "opacity-50" : "opacity-0"
+          }`}
+        />
       </div>
 
-      <div className="Why">
-        <GridLayout />
-        <GroupCard />
+      <div className="home-number">
+        <GridLayout/>
+      </div>
+      <div className="home-why-us">
+      <GroupCard />
       </div>
 
-      <div className="Services">
+      <div className="home-Services">
         <Services />
 
         {/* <div className="mt-12 md:mt-16 px-4"> */}
-          <ResponsiveCard />
+          <PersonalizedProg/>
         {/* </div> */}
 
         <div>
@@ -63,3 +87,6 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
+

@@ -1,101 +1,79 @@
 
-import { NumberTicker } from '@/components/ui/number-ticker';
 
-const GridLayout = () => {
+import React, { useEffect, useRef, useState } from "react";
+import { ChevronDown, Building2, Users, Award, Briefcase } from 'lucide-react';
+
+function StatNumber({ end, label, icon: Icon }: { end: number; label: string; icon: React.ElementType }) {
+  const [count, setCount] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (elementRef.current) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    let start = 0;
+    const duration = 2000;
+    const increment = end / (duration / 16);
+    let timer: number;
+
+    const updateCount = () => {
+      start += increment;
+      if (start < end) {
+        setCount(Math.floor(start));
+        timer = requestAnimationFrame(updateCount);
+      } else {
+        setCount(end);
+      }
+    };
+
+    timer = requestAnimationFrame(updateCount);
+    return () => cancelAnimationFrame(timer);
+  }, [end, isVisible]);
+
   return (
-    <div className="py-10 md:px-36">
-      <div
-        className="grid gap-4 p-4"
-        style={{
-          gridTemplateAreas: `
-            "header header header header header header"
-            "menu main main main right right"
-            "menu footer footer footer footer footer"
-          `,
-        }}
-      >
-        <div
-          className="bg-tg-600 text-center p-5 text-lg font-medium rounded-xl"
-          style={{ gridArea: "header" }}
-        >
-          <NumberTicker
-            value={100} // The number
-            suffix="+"
-            direction="up"
-            delay={0.5}
-            className="text-3xl font-bold text-black-600"
-            decimalPlaces={0}
-          />
-          <br />
-          <span className='text-black text-3xl font-bold text-black-600'> Students Gurantee</span>
-        </div>
-
-        <div
-          className="bg-tg-600 text-center p-5 text-lg font-medium rounded-xl"
-          style={{ gridArea: "menu" }}
-        >
-          <NumberTicker
-            value={25}
-            suffix="+"
-            direction="up"
-            delay={0.5}
-            className="text-3xl font-bold text-black-600"
-            decimalPlaces={0}
-          />
-          <br />
-          <span className='text-black text-3xl font-bold text-black-600'> Workshops </span>
-          <br />
-          <span className='text-black text-3xl font-bold text-black-600'> Conducted </span>
-        </div>
-
-        <div
-          className="bg-tg-600 text-center p-5 text-lg font-medium rounded-xl"
-          style={{ gridArea: "main" }}
-        >
-          <NumberTicker
-            value={42}
-            suffix="+"
-            direction="up"
-            delay={0.5}
-            className="text-3xl font-bold text-black-600"
-            decimalPlaces={0}
-          />
-        </div>
-
-        <div
-          className="bg-tg-600 text-center p-5 text-lg font-medium rounded-xl"
-          style={{ gridArea: "right" }}
-        >
-          <NumberTicker
-            value={42}
-            suffix="+"
-            direction="up"
-            delay={0.5}
-            className="text-3xl font-bold text-black-600"
-            decimalPlaces={0}
-          />
-        </div>
-
-        <div
-          className="bg-tg-600 text-center p-5 text-lg font-medium rounded-xl"
-          style={{ gridArea: "footer" }}
-        >
-          <NumberTicker
-            value={100}
-            suffix="%"
-            direction="up"
-            delay={0.5}
-            className="text-3xl font-bold text-black-600"
-            decimalPlaces={0}
-          />
-          <br />
-          <span className='text-black text-3xl font-bold text-black-600'> Acceptance </span>
-          <br />
-          <span className='text-black text-3xl font-bold text-black-600'> Rate </span>
-        </div>
+    <div
+      ref={elementRef}
+      className={`stat-number ${isVisible ? 'visible' : 'hidden-number'} text-center`}
+    >
+      <div className="flex justify-center mb-4">
+        <Icon className="w-12 h-12 text-blue-600" />
       </div>
+      <div className="text-4xl font-bold text-gray-900 mb-2">{count}+</div>
+      <div className="text-gray-600">{label}</div>
     </div>
   );
-};
+}
 
+const GridLayout = () => {
+    return (
+      <section className="bg-white/95 backdrop-blur-sm pt-32 pb-16 rounded-t-[40px] shadow-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <StatNumber end={500} label="Companies Connected" icon={Building2} />
+          <StatNumber end={1000} label="Workshops Conducted" icon={Award} />
+          <StatNumber end={10000} label="Professionals Trained" icon={Users} />
+          <StatNumber end={250} label="Active Projects" icon={Briefcase} />
+        </div>
+      </div>
+      </section>
+    );
+};
+    
 export default GridLayout;
