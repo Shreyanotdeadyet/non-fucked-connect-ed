@@ -8,6 +8,7 @@ import aboutbg3 from '../assets/aboutbg3.png';
 import aboutbg5 from '../assets/aboutbg5.png';
 import aboutbg7 from '../assets/aboutbg7.png';
 import aboutbg8 from '../assets/aboutbg8.png';
+import AboutUsSection from '@/components/about_hero';
 
 
 
@@ -47,27 +48,20 @@ function AboutUs() {
   return (
     <div className="w-full">
       {/* Hero Section with Overlaid Images */}
-      <div className="relative w-full h-[600px]"
-        style={{
-          backgroundImage: `url(${abtHero})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      {/* <div className="relative w-full h-[600px] bg-dtg-500"> */}
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/40">
+        {/* <div className="absolute inset-0"> */}
           {/* Content Container */}
-          <div className="container mx-auto px-4 h-full">
+          {/* <div className="container mx-auto px-4 h-full"> */}
             {/* Text Section */}
-            <div className="h-full flex flex-col justify-center max-w-2xl">
+            {/* <div className="h-full flex flex-col justify-center max-w-2xl">
               <h1 className="text-6xl font-bold text-white mb-4">About Us</h1>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Image Boxes Container - Only on large screens, positioned higher */}
-        <div className="absolute right-0 top-1/4 transform -translate-y-1/2 w-1/2 px-8 hidden lg:block">
+        {/* <div className="absolute right-0 top-1/4 transform -translate-y-1/2 w-1/2 px-8 hidden lg:block">
           <div className="grid grid-cols-2 gap-4">
             {imageBoxes.map(({ id, delay, image }) => (
               <div
@@ -96,25 +90,20 @@ function AboutUs() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Content Section */}
-      <div className="container mx-auto px-8 py-[170px] my-10">
-</div>
-
+      {/* <div className="container mx-auto px-8 py-[170px]  bg-black">
+</div> */}
+<AboutUsSection/>
     
       {/* Our Story Section */}
       <section className="relative min-h-screen flex items-center">
         <div 
-          className="absolute inset-0 z-0" 
-          style={{ 
-            backgroundImage: `url(${aboutbg1})`,
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-            transform: `translateY(${(scrollY - window.innerHeight) * 0.2}px)`,
-          }}
+          className="absolute inset-0 z-0 bg-purple-200" 
+          
         />
-        <div className="absolute inset-0 bg-black/40  z-10" />
+        <div className="absolute inset-0 z-10" />
         <div className="relative z-20 container mx-auto px-6 py-20">
           <div className="bg-white/90 backdrop-blur-lg rounded-2xl p-8 md:p-12 max-w-2xl ml-auto">
             <ScrollText className="w-12 h-12 text-blue-400 mb-6" />
@@ -176,9 +165,9 @@ function AboutUs() {
       {/* Why Choose Us Section */}
       <section className="relative min-h-screen">
         <div 
-          className="absolute inset-0 z-0" 
+          className="absolute inset-0 z-0 bg-dtg-500" 
           style={{ 
-            backgroundImage: `url(${aboutbg8})`,
+            // backgroundImage: `url(${aboutbg8})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             transform: `translateY(${(scrollY - window.innerHeight * 4) * 0.2}px)`,
@@ -187,35 +176,35 @@ function AboutUs() {
         <div className="absolute inset-0  z-10" />
         <div className="relative z-20 container mx-auto px-6 py-20">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-pup mb-4">Why Choose Us</h2>
-            <p className="text-xl text-black">Empowering your journey to success</p>
+            <h2 className="text-5xl font-bold text-white mb-4">Why Choose Us</h2>
+            <p className="text-xl text-white">Empowering your journey to success</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="group bg-black/70 backdrop-blur-lg rounded-2xl p-8 transition-all duration-300 hover:bg-black/90 hover:transform hover:-translate-y-1 hover:shadow-2xl">
-              <Users className="w-12 h-12 text-purple-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-2xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-purple-300">Personal Attention</h3>
-              <p className="text-gray-100 transition-opacity duration-300 group-hover:opacity-90">
+            <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
+              <Users className="w-12 h-12 text-orange-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
+              <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-orange-300">Personal Attention</h3>
+              <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
                 We work with a small cohort to ensure 100% dedication to each student. Your ambitions matter to us, and we're here to make them achievable.
               </p>
             </div>
-            <div className="group bg-black/70 backdrop-blur-lg rounded-2xl p-8 transition-all duration-300 hover:bg-black/90 hover:transform hover:-translate-y-1 hover:shadow-2xl">
+            <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl">
               <Brain className="w-12 h-12 text-blue-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-2xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-blue-300">Holistic Development</h3>
-              <p className="text-gray-100 transition-opacity duration-300 group-hover:opacity-90">
+              <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-blue-300">Holistic Development</h3>
+              <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
                 Our program deconstructs your interests and influences, helping you find the awareness needed to be the best version of yourself in an increasingly competitive landscape.
               </p>
             </div>
-            <div className="group bg-black/70 backdrop-blur-lg rounded-2xl p-8 transition-all duration-300 hover:bg-black/90 hover:transform hover:-translate-y-1 hover:shadow-2xl">
+            <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
               <Compass className="w-12 h-12 text-green-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-2xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-green-300">Customized Guidance</h3>
-              <p className="text-gray-100 transition-opacity duration-300 group-hover:opacity-90">
+              <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-green-300">Customized Guidance</h3>
+              <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
                 We offer highly customized College Counseling alongside career guidance, viewing top-tier college admission as a stepping stone toward a fulfilling career and balanced life.
               </p>
             </div>
-            <div className="group bg-black/70 backdrop-blur-lg rounded-2xl p-8 transition-all duration-300 hover:bg-black/90 hover:transform hover:-translate-y-1 hover:shadow-2xl">
+            <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
               <Heart className="w-12 h-12 text-red-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-2xl font-bold text-white mb-4 transition-colors duration-300 group-hover:text-red-300">Continuous Support</h3>
-              <p className="text-gray-100 transition-opacity duration-300 group-hover:opacity-90">
+              <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-red-300">Continuous Support</h3>
+              <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
                 Our program ensures you feel supported throughout your high school journey - from navigating complex college applications to building your future career path. We're here to empower you.
               </p>
             </div>
