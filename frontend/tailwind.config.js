@@ -11,6 +11,9 @@ module.exports = {
 		  robo1: ["Roboto", 'serif'],
 		  robo2: ["Roboto Slab", 'serif'],	
 		},
+		fontSize: {
+			'fluid': 'clamp(1.5rem, 4vw, 2.25rem)',
+		  },
 		borderRadius: {
 		  lg: 'var(--radius)',
 		  md: 'calc(var(--radius) - 2px)',

@@ -319,9 +319,9 @@ function About() {
             {/* Left Content */}
             <div className="space-y-8">
               <h1 className="hd-ft leading-tight">
-              Your Future, Your Path— We Guide the Way :)
+              Your Future, Your Path— We Guide the Way
               </h1>
-              <p className="nom-ft leading-relaxed">
+              <p className="nom-ft-purple leading-relaxed">
               No generic advice—only tailored strategies for your success!
               </p>
               <button 

@@ -79,7 +79,7 @@ const TestimonialComponent = () => {
               key={item.id}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
-              className={`absolute transition-transform duration-500 ease-in-out rounded-lg shadow-2xl bg-dtg-900 p-3 ${
+              className={`absolute transition-transform duration-500 ease-in-out rounded-xl shadow-2xl bg-dpup p-3 ${
                 item.id === activeId ? "w-3/5 scale-100 z-10" : "w-1/3 scale-90 z-0 opacity-50"
               }`}
               style={{
@@ -89,14 +89,14 @@ const TestimonialComponent = () => {
             >
               {item.video ? (
                 <video
-                  className="rounded-lg w-full h-full object-contain shadow-lg"
+                  className="rounded-xl w-full h-full object-contain shadow-lg"
                   controls
                   src="https://www.w3schools.com/html/mov_bbb.mp4"
                 />
               ) : (
-                <div className="text-center text-black p-6 bg-white rounded-lg flex flex-col justify-center items-center h-full overflow-y-auto max-h-full">
+                <div className="text-center text-black p-6 bg-white rounded-xl flex flex-col justify-center items-center h-full overflow-y-auto max-h-full">
                   <p className="nom-ft overflow-auto">{item?.comment ?? "No comment available."}</p>
-                  <span className="mt-4 nom-b-ft">{item?.name ?? "Unknown"}</span>
+                  <span className="mt-4 nom-b-ft-purple">{item?.name ?? "Unknown"}</span>
                 </div>
               )}
             </div>

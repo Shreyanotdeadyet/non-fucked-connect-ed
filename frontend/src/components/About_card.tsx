@@ -55,7 +55,7 @@ function AboutCard() {
             className={`transition-all duration-500 ease-in-out ${
               getCardPosition(card.id) === "main-card"
                 ? "flex-grow bg-white rounded-xl shadow-lg overflow-hidden"
-                : "w-48 bg-dtg-500 rounded-xl cursor-pointer hover:bg-black"
+                : "w-48 bg-dpup rounded-xl cursor-pointer hover:bg-pup"
             }`}
             onClick={() => setActiveCard(card.id)}
           >
@@ -68,7 +68,7 @@ function AboutCard() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
-                  <div className="absolute bottom-2 left-2 p-2 bg-pup rounded-xl text-white">
+                  <div className="absolute bottom-2 left-2 p-2 bg-dpup rounded-xl text-white">
                     <div className="flex items-center">
                       {card.icon}
                       {/* hf-ft white text-3xl */}

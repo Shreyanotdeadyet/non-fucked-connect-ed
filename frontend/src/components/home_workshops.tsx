@@ -356,8 +356,8 @@ function Workshops() {
   return (
     <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-bold text-gray-900 mb-4 text-center">Upcoming Workshops</h1>
-        <p className="text-gray-600 text-xl mb-12 text-center">Expand your knowledge with our expert-led sessions</p>
+        <h1 className="hd-ft mb-4 text-center">Upcoming Workshops</h1>
+        <p className="nom-b-ft-purple mb-12 text-center">Expand your knowledge with our expert-led sessions</p>
         <Carousel items={workshops} />
       </div>
     </div>

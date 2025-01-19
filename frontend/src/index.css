@@ -60,6 +60,11 @@
   /* text-slate-900 */
 }
 
+.nom-ft-purple {
+  @apply font-robo1 font-bold text-dpup text-xl 
+  /* text-slate-900 */
+}
+
 .nom-b-ft{
   /*heading thoda bold */
   @apply font-robo2 font-black text-pink-900 text-2xl
@@ -87,13 +92,17 @@
 
 .hd-ft{
   /* heading only */
-  @apply font-robo2 text-5xl font-bold text-dpup
+  @apply font-robo2 font-bold text-dpup text-fluid
 }
 
 .hd-ft-teal{
-  @apply font-robo2 text-5xl font-bold text-tg-600
+  @apply font-robo2 text-4xl font-bold text-tg-600
 }
 
 .hd-ft-white{
-  @apply font-robo2 text-5xl font-bold text-white
+  @apply font-robo2 text-4xl font-bold text-white
+}
+
+.hd-ft-slate{
+  @apply font-robo2 text-4xl font-bold text-slate-900
 }
