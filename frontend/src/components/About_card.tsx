@@ -71,17 +71,18 @@ function AboutCard() {
                   <div className="absolute bottom-2 left-2 p-2 bg-pup rounded-xl text-white">
                     <div className="flex items-center">
                       {card.icon}
-                      <h2 className="text-3xl font-bold ml-4">{card.title}</h2>
+                      {/* hf-ft white text-3xl */}
+                      <h2 className="font-robo2 text-3xl font-bold text-white ml-4">{card.title}</h2>
                     </div>
                   </div>
                 </div>
                 <div className="p-8">
-                  <p className="text-gray-600 leading-relaxed text-lg">{card.content}</p>
+                  <p className="nom-ft leading-relaxed">{card.content}</p>
                 </div>
               </div>
             ) : (
               <div className="h-full flex items-center justify-center">
-                <h2 className="vertical-text text-white font-bold text-xl whitespace-nowrap">
+                <h2 className="vertical-text nom-b-ft-white whitespace-nowrap">
                   {card.title}
                 </h2>
               </div>

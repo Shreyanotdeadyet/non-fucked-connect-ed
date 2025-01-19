@@ -22,7 +22,6 @@ module.exports = {
 			lteal: '#00e590',
 			dteal: '#009984', 
 			pup:'#6419cc',
-
 			dpup:'#3d018f',
 			beg:'#f7f0de',
 			ltg:'#00e590',

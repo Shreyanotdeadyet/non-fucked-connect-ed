@@ -318,15 +318,15 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
-              <h1 className="text-5xl font-bold text-gray-900 leading-tight">
+              <h1 className="hd-ft leading-tight">
               Your Future, Your Path— We Guide the Way :)
               </h1>
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p className="nom-ft leading-relaxed">
               No generic advice—only tailored strategies for your success!
               </p>
               <button 
                 onClick={scrollToAboutCard} 
-                className="inline-flex items-center px-6 py-3 text-lg font-semibold text-white 
+                className="inline-flex items-center px-6 py-3 nom-b-ft-white 
                 bg-pup rounded-xl transition-colors duration-200"
               >
                 <Calendar className="w-5 h-5 mr-2" />
@@ -371,35 +371,36 @@ function About() {
       >
       <div className="relative bg-dtg-500 z-20  px-6 py-20">
            <div className="text-center mb-16">
-             <h2 className="text-5xl font-bold text-white mb-4">Why Choose Us</h2>
-             <p className="text-xl text-white">Empowering your journey to success</p>
+             <h2 className="hd-ft-white mb-4">Why Choose Us</h2>
+             <p className="nom-b-ft-white">Empowering your journey to success</p>
            </div>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-             <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
+             <div className="group bg-white backdrop-blur-lg rounded-xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
                <Users className="w-12 h-12 text-orange-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-               <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-orange-300">Personal Attention</h3>
-               <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
+               {/* hd-ft text-3xl salte-900 */}
+               <h3 className="font-robo2 text-3xl font-bold text-slate-900 mb-4 transition-colors duration-300 group-hover:text-orange-300">Personal Attention</h3>
+               <p className="nom-ft transition-opacity duration-300 group-hover:opacity-90">
                  We work with a small cohort to ensure 100% dedication to each student. Your ambitions matter to us, and we're here to make them achievable.
                </p>
              </div>
-             <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl">
+             <div className="group bg-white backdrop-blur-lg rounded-xl p-8 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl">
                <Brain className="w-12 h-12 text-blue-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-               <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-blue-300">Holistic Development</h3>
-               <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
+               <h3 className="font-robo2 text-3xl font-bold text-slate-900 mb-4 transition-colors duration-300 group-hover:text-blue-300">Holistic Development</h3>
+               <p className="nom-ft transition-opacity duration-300 group-hover:opacity-90">
                  Our program deconstructs your interests and influences, helping you find the awareness needed to be the best version of yourself in an increasingly competitive landscape.
                </p>
              </div>
-             <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
+             <div className="group bg-white backdrop-blur-lg rounded-xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
                <Compass className="w-12 h-12 text-green-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-               <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-green-300">Customized Guidance</h3>
-               <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
+               <h3 className="font-robo2 text-3xl font-bold text-slate-900 mb-4 transition-colors duration-300 group-hover:text-green-300">Customized Guidance</h3>
+               <p className="nom-ft transition-opacity duration-300 group-hover:opacity-90">
                  We offer highly customized College Counseling alongside career guidance, viewing top-tier college admission as a stepping stone toward a fulfilling career and balanced life.
                </p>
              </div>
-             <div className="group bg-white backdrop-blur-lg rounded-2xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
+             <div className="group bg-white backdrop-blur-lg rounded-xl p-8 transition-all duration-300  hover:transform hover:-translate-y-2 hover:shadow-2xl">
                <Heart className="w-12 h-12 text-red-400 mb-6 transition-transform duration-300 group-hover:scale-110" />
-               <h3 className="text-2xl font-bold text-black mb-4 transition-colors duration-300 group-hover:text-red-300">Continuous Support</h3>
-               <p className="text-black transition-opacity duration-300 group-hover:opacity-90">
+               <h3 className="font-robo2 text-3xl font-bold text-slate-900 mb-4 transition-colors duration-300 group-hover:text-red-300">Continuous Support</h3>
+               <p className="nom-ft transition-opacity duration-300 group-hover:opacity-90">
                  Our program ensures you feel supported throughout your high school journey - from navigating complex college applications to building your future career path. We're here to empower you.
                </p>
              </div>
@@ -413,8 +414,8 @@ function About() {
         <div className="absolute inset-0 " />
         <div className="relative container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-pup mb-4">Meet Our Team</h2>
-            <p className="text-xl text-black">Dedicated professionals committed to your success</p>
+            <h2 className="hd-ft mb-4">Meet Our Team</h2>
+            <p className="nom-b-ft-purple">Dedicated professionals committed to your success</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {/* Team Member 1 */}
@@ -427,9 +428,9 @@ function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-2">Sarah Johnson</h3>
-                  <p className="text-gray-200 mb-4">Education Counselor</p>
-                  <p className="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <h3 className="nom-b-ft-white mb-2">Sarah Johnson</h3>
+                  <p className="font-robo1 font-bold text-xl text-white mb-4">Education Counselor</p>
+                  <p className="font-robo1 font-bold text-xl text-white mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     With 15 years of experience in college counseling, Sarah specializes in helping students discover their unique path to success.
                   </p>
                   <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
@@ -456,9 +457,10 @@ function About() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-2xl font-bold text-white mb-2">David Chen</h3>
-                  <p className="text-gray-200 mb-4">Career Development Specialist</p>
-                  <p className="text-gray-300 mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <h3 className="nom-b-ft-white
+                   mb-2">David Chen</h3>
+                  <p className="font-robo1 font-bold text-xl text-white mb-4">Career Development Specialist</p>
+                  <p className="font-robo1 font-bold text-xl text-white mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     David brings industry expertise and a deep understanding of career landscapes to help students align their education with future goals.
                   </p>
                   <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">

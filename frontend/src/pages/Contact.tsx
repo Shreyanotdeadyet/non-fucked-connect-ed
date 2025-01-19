@@ -78,7 +78,7 @@ const ContactForm: React.FC = () => {
               />
               <div className="ml-4">
                 <p className="nom-ft">Girija Kale</p>
-                <p className="nom-ft">Founder @Connect-Ed</p>
+                <p className="nom-b-ft">Founder @Connect-Ed</p>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ const ContactForm: React.FC = () => {
             <button
               type="button"
               onClick={handleWhatsAppSubmit}
-              className="nom-ft flex items-center justify-center w-full sm:w-1/2 px-6 py-3 bg-pup hover:bg-dpup focus:outline-none rounded-xl"
+              className="font-robo1 font-bold text-xl text-white flex items-center justify-center w-full sm:w-1/2 px-6 py-3 bg-pup hover:bg-dpup focus:outline-none rounded-xl"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
@@ -149,7 +149,7 @@ const ContactForm: React.FC = () => {
             <button
               type="button"
               onClick={handleEmailSubmit}
-              className="nom-ft flex items-center justify-center w-full sm:w-1/2 px-6 py-3 bg-pup hover:bg-purple-600 focus:outline-none rounded-xl"
+              className="font-robo1 font-bold text-xl text-white flex items-center justify-center w-full sm:w-1/2 px-6 py-3 bg-pup hover:bg-purple-600 focus:outline-none rounded-xl"
             >
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"

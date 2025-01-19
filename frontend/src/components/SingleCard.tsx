@@ -61,7 +61,7 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
 
   {/* Bottom Section - Text with White Background */}
   <div className="w-full h-1/3 bg-white flex justify-center items-center rounded-b-xl px-4">
-    <p className="nom-b-ft text-center">{frontText}</p>
+    <p className="nom-b-ft-purple text-center">{frontText}</p>
   </div>
 </div>
 

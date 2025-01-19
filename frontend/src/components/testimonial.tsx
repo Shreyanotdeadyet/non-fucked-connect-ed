@@ -66,8 +66,8 @@ const TestimonialComponent = () => {
     <div className="h-screen text-white flex flex-col justify-center items-center relative overflow-hidden">
       {/* Header Section */}
       <div className="absolute top-10 text-center z-20 ">
-        <h2 className="hd-ft mb-4">What Our Clients Say</h2>
-        <p className="text-lg italic text-dtg-500">"Our clients have experienced the best results with our services."</p>
+        <h2 className="hd-ft-teal mb-4">What Our Clients Say</h2>
+        <p className="nom-b-ft italic">"Our clients have experienced the best results with our services."</p>
       </div>
 
       {/* Carousel Section */}

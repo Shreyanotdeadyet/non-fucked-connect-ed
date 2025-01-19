@@ -25,8 +25,8 @@ const Services = () => {
               <li
                 key={item.label}
                 className={`cursor-pointer py-4 px-8 rounded-lg transition-all duration-200 text-xl ${item === selectedTab
-                    ? "font-semibold bg-pp-300 nom-b-ft shadow-md"
-                    : "nom-b-ft bg-pink-100 hover:bg-pp-100"
+                    ? "font-semibold bg-pp-300 nom-b-ft-white shadow-md"
+                    : "nom-b-ft-slate bg-pink-100 hover:bg-pp-100"
                   }`}
                 onClick={() => setSelectedTab(item)}
               >
@@ -66,7 +66,7 @@ const Services = () => {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: -20, opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="nom-b-ft"
+                className="nom-b-ft-slate"
               >
                 {selectedTab ? selectedTab.label : "Default Text"}
               </motion.div>

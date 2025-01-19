@@ -20,7 +20,7 @@ function CategoryBlogs({ category, onClose }: CategoryBlogsProps) {
             <h2 className="hd-ft">{category}</h2>
             <button
               onClick={onClose}
-              className="px-4 py-3 bg-gray-900 nom-ft rounded-xl hover:bg-gray-800 transition-colors"
+              className="px-4 py-3 bg-gray-900 font-robo1 font-bold text-xl text-white rounded-xl hover:bg-gray-800 transition-colors"
             >
               Close
             </button>

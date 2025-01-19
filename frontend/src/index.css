@@ -56,15 +56,44 @@
 } 
 
 .nom-ft {
-  @apply font-robo1 font-bold text-red-900 text-xl 
+  @apply font-robo1 font-bold text-slate-900 text-xl 
   /* text-slate-900 */
 }
 
 .nom-b-ft{
   /*heading thoda bold */
-  @apply font-robo2 font-black text-blue-900 text-2xl
+  @apply font-robo2 font-black text-pink-900 text-2xl
 }
+
+.nom-b-ft-slate{
+  /*heading thoda bold */
+  @apply font-robo2 font-black text-slate-900 text-2xl
+}
+
+.nom-b-ft-teal{
+  /*heading thoda bold */
+  @apply font-robo2 font-black text-tg-600 text-2xl
+}
+
+.nom-b-ft-purple{
+  /*heading thoda bold */
+  @apply font-robo2 font-black text-2xl text-dpup
+}
+
+.nom-b-ft-white{
+  /*heading thoda bold */
+  @apply font-robo2 font-black text-2xl text-white
+}
+
 .hd-ft{
   /* heading only */
-  @apply font-robo2 text-5xl font-bold text-pink-950
+  @apply font-robo2 text-5xl font-bold text-dpup
+}
+
+.hd-ft-teal{
+  @apply font-robo2 text-5xl font-bold text-tg-600
+}
+
+.hd-ft-white{
+  @apply font-robo2 text-5xl font-bold text-white
 }
