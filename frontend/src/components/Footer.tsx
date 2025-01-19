@@ -4,10 +4,8 @@ import logo from "../assets/logo.png"; // Import the logo image
 const Footer = () => {
   return (
     <footer
-      className="bg-gradient-to-r"
-      style={{
-        backgroundImage: "linear-gradient(to bottom right, #eee4f5, #e6fffc)", // light purple to light blue gradient from left to right
-      }}
+      className="bg-violet-50"
+      
     >
       <div className="container mx-auto text-black px-4 py-4">
         {/* Footer Links */}
