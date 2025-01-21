@@ -86,7 +86,7 @@ const ReviewCard = ({
     return (
       <div className="relative flex flex-col items-center justify-center w-screen max-w-full h-auto overflow-hidden bg-[#3a023b]">
         <h1 className="hd-ft-white text-center py-16">
-      University
+      Universities 
     </h1>
         {/* Container for Marquee */}
         <div className="w-full overflow-hidden">

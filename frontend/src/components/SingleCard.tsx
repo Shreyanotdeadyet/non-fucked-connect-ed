@@ -11,28 +11,42 @@ interface SingleCardProps {
 const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardIndex }) => {
   const backSideContent = [
     {
-      title: "Trusted Excellence",
+      title: "MAJOR AGNOSTIC",
       icon: <Shield className="w-8 h-8 text-[#750477]" />,
-      text: "Over a decade of proven expertise in delivering outstanding results.",
-      features: ["Industry-leading standards", "Proven track record"],
+      features: [
+        "Drawn to STEM, Arts, Business, or an Interdisciplinary path",
+        "Tailored support provided for every field",
+      ],
     },
     {
-      title: "24/7 Support",
+      title: "COUNTRY AGNOSTIC",
       icon: <Clock className="w-8 h-8 text-[#750477]" />,
-      text: "Round-the-clock assistance ensuring you're never left without help.",
-      features: ["Instant response time", "Expert team available"],
+      features: [
+        "Expertise spans global education systems",
+        "Guidance provided regardless of the country you choose to apply to",
+        "24/7 assistance ensuring you're never left without help",
+      ],
     },
     {
-      title: "Personalized Guidance",
+      title: "EXPERT-DRIVEN PROCESSES",
       icon: <Heart className="w-8 h-8 text-[#750477]" />,
-      text: "Tailored strategies to fit every student's academic journey.",
-      features: ["Custom career planning", "One-on-one mentorship"],
+      features: [
+        "Tailored strategies combining teaching experience and counseling expertise",
+        "Understanding of what drives you and the complexities of the higher education landscape",
+        "Ensures a tailored approach to support each student's academic journey",
+        "Focused on helping you succeed",
+      ],
     },
     {
-      title: "Proven Success",
+      title: "EXCEEDING EXPECTATIONS",
       icon: <Trophy className="w-8 h-8 text-[#750477]" />,
-      text: "Our students have secured admissions to top global universities.",
-      features: ["Ivy League admissions", "Merit-based scholarships"],
+      features: [
+        "Delivering results that surpass expectations",
+        "Helping students gain admission to top-tier universities",
+        "Providing personalized guidance addressing each student's unique needs",
+        "Assisting with vegetarianism-related issues",
+        "Offering support for adapting to cold weather at an Ivy League school",
+      ],
     },
   ];
 
@@ -70,14 +84,11 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
             </div>
 
             {/* Content */}
-            <div className="p-6 pt-8">
+            <div className="p-6 pt-8 h-full flex flex-col justify-between">
               <h3 className="text-xl font-semibold text-[#3a023b] mb-4">
                 {backSideContent[cardIndex - 1].title}
               </h3>
-              <p className="text-[#750477] leading-relaxed mb-6">
-                {backSideContent[cardIndex - 1].text}
-              </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 overflow-y-auto flex-1">
                 {backSideContent[cardIndex - 1].features.map((feature, index) => (
                   <li key={index} className="flex items-center text-[#750477]">
                     <div className="w-1.5 h-1.5 bg-[#750477] rounded-full mr-2"></div>
