@@ -34,6 +34,14 @@ const Home: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const videoRef = useRef<HTMLVideoElement | null>(null); // ✅ Explicit type
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2; // Set playback speed
+    }
+  }, []);
+
   return (
     <div className="bg-base">
       {/* <div className="fixed w-full h-screen overflow-hidden"> */}
@@ -50,38 +58,37 @@ const Home: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         <div
-          className={`absolute inset-0 bg-black transition-opacity duration-500 ${
-            isScrolled ? "opacity-50" : "opacity-0"
-          }`}
+          className={`absolute inset-0 bg-black transition-opacity duration-500 ${isScrolled ? "opacity-50" : "opacity-0"
+            }`}
         />
       </div>
 
       <div className="home-number">
-        <GridLayout/>
+        <GridLayout />
       </div>
       <div className="home-why-us">
-      <GroupCard />
+        <GroupCard />
       </div>
 
       <div className="home-Services">
         <Services />
-
-        {/* <div className="mt-12 md:mt-16 px-4"> */}
-          <PersonalizedProg/>
-        {/* </div> */}
-
-        <div>
-          <Workshops />
-        </div>
-
-        <MarqueeDemo />
-
-        <section id="testimonials">
-          <div className="w-full h-auto">
-            <TestimonialComponent />
-          </div>
-        </section>
       </div>
+      {/* <div className="mt-12 md:mt-16 px-4"> */}
+      <PersonalizedProg />
+      {/* </div> */}
+
+      <div>
+        <Workshops />
+      </div>
+
+      <MarqueeDemo />
+
+      <section id="testimonials">
+        <div className="w-full h-auto">
+          <TestimonialComponent />
+        </div>
+      </section>
+
     </div>
   );
 };

@@ -21,7 +21,7 @@ module.exports = {
 		},
 		colors: {
 			beige : '#f7f0de',
-			purple : '#6419cc',
+			// purple : '#6419cc',
 			lteal: '#00e590',
 			dteal: '#009984', 
 			pup:'#6419cc',
