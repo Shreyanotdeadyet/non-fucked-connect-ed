@@ -53,10 +53,10 @@ function StatNumber({ end, label, icon: Icon }: { end: number; label: string; ic
       className={`stat-number ${isVisible ? 'visible' : 'hidden-number'} text-center`}
     >
       <div className="flex justify-center mb-4">
-        <Icon className="w-12 h-12 text-dpup" />
+        <Icon className="w-12 h-12 text-mp" />
       </div>
-      <div className="text-4xl font-bold text-gray-900 mb-2">{count}+</div>
-      <div className="nom-ft">{label}</div>
+      <div className="text-4xl font-bold text-black mb-2">{count}+</div>
+      <div className="icon-font">{label}</div>
     </div>
   );
 }

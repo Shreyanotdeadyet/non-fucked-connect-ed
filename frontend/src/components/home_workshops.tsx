@@ -64,7 +64,7 @@ function WorkshopCard({ workshop }: { workshop: typeof workshops[0] }) {
     >
       <div className="h-full p-8 flex flex-col">
         <div className="flex-1">
-          <h2 className="text-2xl font-semibold text-[#3a023b] mb-6 pb-4 border-b border-purple-100">
+          <h2 className="small-dark-heading mb-6 pb-4 border-b border-purple-100">
             {workshop.title}
           </h2>
           
@@ -73,16 +73,16 @@ function WorkshopCard({ workshop }: { workshop: typeof workshops[0] }) {
               onClick={() => openGoogleMaps(workshop.coordinates)}
               className="flex items-center space-x-3 text-gray-600 hover:text-purple-600 transition-colors w-full text-left group"
             >
-              <MapPin className="h-5 w-5 text-purple-400" />
-              <span className="text-black group-hover:underline">{workshop.location}</span>
+              <MapPin className="h-5 w-5 text-mp" />
+              <span className="normal-black-text group-hover:underline">{workshop.location}</span>
             </button>
 
             <button 
               onClick={() => addToCalendar(workshop.date, workshop.time, workshop.title, workshop.location)}
               className="flex items-center space-x-3 text-gray-600 hover:text-purple-600 transition-colors group"
             >
-              <Calendar className="h-5 w-5 text-purple-400" />
-              <span className="text-black group-hover:underline">
+              <Calendar className="h-5 w-5 text-mp" />
+              <span className="normal-black-text group-hover:underline">
                 {new Date(workshop.date).toLocaleDateString('en-US', {
                   weekday: 'long',
                   year: 'numeric',
@@ -96,8 +96,8 @@ function WorkshopCard({ workshop }: { workshop: typeof workshops[0] }) {
               onClick={() => addToCalendar(workshop.date, workshop.time, workshop.title, workshop.location)}
               className="flex items-center space-x-3 text-gray-600 hover:text-purple-600 transition-colors group"
             >
-              <Clock className="h-5 w-5 text-purple-400" />
-              <span className="text-black group-hover:underline">
+              <Clock className="h-5 w-5 text-mp" />
+              <span className="normal-black-text group-hover:underline">
                 {new Date(`2000-01-01T${workshop.time}`).toLocaleTimeString('en-US', {
                   hour: 'numeric',
                   minute: 'numeric',
@@ -110,7 +110,7 @@ function WorkshopCard({ workshop }: { workshop: typeof workshops[0] }) {
         
         <button 
           onClick={() => addToCalendar(workshop.date, workshop.time, workshop.title, workshop.location)}
-          className="w-full bg-[#3a023b] hover:bg-purple-600 text-white py-4 px-6 rounded-lg transition-colors text-base font-medium"
+          className="w-full bg-dp hover:bg-mp text-white py-4 px-6 rounded-lg transition-colors text-base font-medium"
         >
           Register Now
         </button>
@@ -160,13 +160,13 @@ function Carousel({ items }: { items: typeof workshops }) {
             onClick={prevSlide}
             className="absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-purple-50 text-purple-600 p-3 rounded-full shadow-sm border border-purple-100 transition-colors z-20"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-6 w-6 text-mp" />
           </button>
           <button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-purple-50 text-purple-600 p-3 rounded-full shadow-sm border border-purple-100 transition-colors z-20"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-6 w-6 text-mp" />
           </button>
         </>
       )}
@@ -178,10 +178,10 @@ function App() {
   return (
     <section className="min-h-screen bg-gradient-to-b from-purple-50 to-white py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <h1 className="text-3xl font-semibold text-[#3a023b] text-center mb-4">
+        <h1 className="large-dark-heading text-center mb-4">
           Upcoming Workshops
         </h1>
-        <p className="text-lg text-[#750477] text-center mb-12">
+        <p className="mid-mp-subhd text-center mb-12">
           Expand your knowledge with our expert-led sessions
         </p>
         <Carousel items={workshops} />

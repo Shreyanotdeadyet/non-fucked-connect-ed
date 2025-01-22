@@ -106,3 +106,35 @@
 .hd-ft-slate{
   @apply font-robo2 text-4xl font-bold text-slate-900
 }
+
+
+/* 3a dp */
+/* text-dp */
+.large-dark-heading{
+  @apply text-3xl font-semibold text-amber-400
+}
+
+/* text-dp */
+.small-dark-heading{
+  @apply text-2xl font-semibold text-amber-400
+}
+
+/* text-mp */
+.mid-mp-subhd{
+  @apply text-lg text-amber-400
+}
+/* text-black */
+.normal-black-text{
+  @apply text-red-400
+}
+
+/* text-mp */
+.normal-mp-text{
+  @apply text-blue-900
+}
+
+
+.icon-font{
+  @apply font-bold text-xl text-black
+  /* stat is different not in this */
+}

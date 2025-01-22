@@ -229,10 +229,10 @@ const TestimonialComponent = () => {
     <section className="min-h-screen bg-gradient-to-b from-[#f5e6f5] to-white py-24 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-semibold text-[#3a023b] mb-4">
+          <h2 className="large-dark-heading mb-4">
             What Our Clients Say
           </h2>
-          <p className="text-lg text-[#750477]">
+          <p className="mid-mp-subhd">
             Hear from students who've transformed their educational journey
           </p>
         </div>
@@ -290,12 +290,12 @@ const TestimonialComponent = () => {
                         <Quote className="text-[#750477] h-8 w-8 mb-4 flex-shrink-0" />
                         <div className="flex-1 overflow-y-auto overflow-x-hidden pr-4 custom-scrollbar">
                           <div className="min-h-full flex flex-col">
-                            <p className="text-black leading-relaxed flex-1">{item.comment}</p>
+                            <p className="normal-black-text leading-relaxed flex-1">{item.comment}</p>
                           </div>
                         </div>
                         <div className="mt-6 pt-6 border-t border-[#3a023b]/10 flex-shrink-0">
-                          <p className="font-semibold text-[#3a023b]">{item.name}</p>
-                          <p className="text-sm text-[#750477] mt-1">{item.title}</p>
+                          <p className="mid-mp-subhd">{item.name}</p>
+                          <p className="normal-mp-text mt-1">{item.title}</p>
                         </div>
                       </>
                     )}
