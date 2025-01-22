@@ -34,7 +34,7 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
       text: "Beyond Just Admissions:",
       features: ["Helping students secure spots at top-tier universities.", "Addressing unique concerns like dietary preferences and climate adaptation."],
     },
-  ];
+  ];  
 
   return (
     <div className="group w-80 h-[450px] relative perspective">
