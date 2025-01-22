@@ -11,28 +11,28 @@ interface SingleCardProps {
 const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardIndex }) => {
   const backSideContent = [
     {
-      title: "Trusted Excellence",
+      title: "All Majors Welcome",
       icon: <Shield className="w-8 h-8 text-[#750477]" />,
-      text: "Over a decade of proven expertise in delivering outstanding results.",
-      features: ["Industry-leading standards", "Proven track record"],
+      text: "Support for Every Field:",
+      features: ["Tailored guidance for STEM, Arts, Business, and interdisciplinary studies.", "Personalized mentorship to align with your academic interests and career goals."],
     },
     {
-      title: "24/7 Support",
+      title: "Global Guidance",
       icon: <Clock className="w-8 h-8 text-[#750477]" />,
-      text: "Round-the-clock assistance ensuring you're never left without help.",
-      features: ["Instant response time", "Expert team available"],
+      text: "Global Guidance, Local Expertise:",
+      features: ["Assistance with applications to universities worldwide.", "Insights into different education systems for a seamless transition."],
     },
     {
-      title: "Personalized Guidance",
+      title: "Expert-Led Process",
       icon: <Heart className="w-8 h-8 text-[#750477]" />,
-      text: "Tailored strategies to fit every student's academic journey.",
-      features: ["Custom career planning", "One-on-one mentorship"],
+      text: "Blending Experience & Strategy",
+      features: ["Combining teaching and counseling expertise for a customized approach.", "Understanding individual aspirations to navigate higher education complexities.                                                                                                                                                                                                                                                                 "],
     },
     {
-      title: "Proven Success",
+      title: "Beyond Admissions",
       icon: <Trophy className="w-8 h-8 text-[#750477]" />,
-      text: "Our students have secured admissions to top global universities.",
-      features: ["Ivy League admissions", "Merit-based scholarships"],
+      text: "Beyond Just Admissions:",
+      features: ["Helping students secure spots at top-tier universities.", "Addressing unique concerns like dietary preferences and climate adaptation."],
     },
   ];
 

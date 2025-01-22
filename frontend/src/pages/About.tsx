@@ -420,7 +420,7 @@ function About() {
                   alt="Sarah Johnson"
                   className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#3a023b]/90 to-[#3a023b]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 " />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-xl font-semibold text-white mb-2">Sarah Johnson</h3>
                   <p className="text-lg text-white mb-4">Education Counselor</p>
@@ -449,7 +449,7 @@ function About() {
                   alt="David Chen"
                   className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#3a023b]/90 to-[#3a023b]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 " />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
                   <h3 className="text-xl font-semibold text-white mb-2">David Chen</h3>
                   <p className="text-lg text-white mb-4">Career Development Specialist</p>

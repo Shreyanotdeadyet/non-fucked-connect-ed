@@ -2,17 +2,11 @@ import landing from "../assets/landing.mp4";
 import React, { useEffect, useRef, useState } from "react";
 import GridLayout from "@/components/home_GridLayout";
 import { MarqueeDemo } from "@/components/home_MarqueeDemo";
-//import '../styles/App.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../index.css";
 import Workshops from "@/components/home_workshops";
-// import Services from "@/components/home_services_cards";
 import TestimonialComponent from "../components/testimonial";
-// import globe from "../assets/globe.mp4";
-
-
-// import Service1 from "@/components/Service_1";
 import ResponsiveCard from "@/components/subscBox";
 import Services from "@/components/Services";
 import GroupCard from "@/components/GroupCard";
@@ -34,20 +28,20 @@ const Home: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const videoRef = useRef<HTMLVideoElement | null>(null); // ✅ Explicit type
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 2; // Set playback speed
+      videoRef.current.playbackRate = 2;
     }
   }, []);
 
   return (
     <div className="bg-base">
-      {/* <div className="fixed w-full h-screen overflow-hidden"> */}
       <div className="home-video-container">
         {/* Video Background */}
         <video
+          ref={videoRef}
           className="absolute top-0 left-0 w-full h-full object-cover"
           autoPlay
           loop
@@ -58,9 +52,21 @@ const Home: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         <div
-          className={`absolute inset-0 bg-black transition-opacity duration-500 ${isScrolled ? "opacity-50" : "opacity-0"
-            }`}
+          className={`absolute inset-0 bg-black transition-opacity duration-500 ${
+            isScrolled ? "opacity-50" : "opacity-0"
+          }`}
         />
+        {/* Quote Container */}
+        <div className="absolute bottom-8 left-8 max-w-md z-10">
+          <blockquote className="text-white">
+            <p className="text-2xl font-semibold mb-2 leading-relaxed">
+              "Education is not preparation for life; education is life itself."
+            </p>
+            <footer className="text-lg opacity-80">
+              — John Dewey
+            </footer>
+          </blockquote>
+        </div>
       </div>
 
       <div className="home-number">
@@ -73,9 +79,7 @@ const Home: React.FC = () => {
       <div className="home-Services">
         <Services />
       </div>
-      {/* <div className="mt-12 md:mt-16 px-4"> */}
       <PersonalizedProg />
-      {/* </div> */}
 
       <div>
         <Workshops />
@@ -88,12 +92,8 @@ const Home: React.FC = () => {
           <TestimonialComponent />
         </div>
       </section>
-
     </div>
   );
 };
 
-export default Home;
-
-
-
+export default Home;         
