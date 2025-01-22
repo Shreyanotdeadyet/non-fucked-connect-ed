@@ -167,10 +167,10 @@ function Services() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-semibold text-[#3a023b] mb-4">
+          <h2 className="large-dark-heading mb-4">
             Our Services
           </h2>
-          <p className="text-lg text-[#750477]">
+          <p className="mid-mp-subhd">
             Comprehensive educational support for every stage of learning
           </p>
         </div>
@@ -208,11 +208,11 @@ function Services() {
                 transition={{ duration: 0.3 }}
                 className="space-y-8"
               >
-                <h3 className="text-2xl font-semibold text-[#3a023b]">
+                <h3 className="small-dark-heading">
                   {selectedTab.label}
                 </h3>
 
-                <ul className="list-disc list-inside space-y-2 text-black">
+                <ul className="list-disc list-inside space-y-2 normal-black-text">
                   {selectedTab.description.map((point, index) => (
                     <li key={index}>{point}</li>
                   ))}

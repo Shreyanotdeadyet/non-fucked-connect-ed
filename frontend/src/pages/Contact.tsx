@@ -265,8 +265,8 @@ Message: ${formData.message}
           
           <div className="relative p-12 lg:p-16 min-h-screen lg:min-h-full flex flex-col justify-center">
             <motion.div className="mb-12" variants={childVariants}>
-              <h1 className="text-4xl font-bold mb-4 text-[#3a023b]">Navigate Your Future</h1>
-              <p className="text-lg text-[#3a023b]/70">
+              <h1 className="large-dark-heading mb-4">Navigate Your Future</h1>
+              <p className="mid-mp-subhd">
                 Let's plot the course to your educational success together.
               </p>
             </motion.div>
@@ -294,20 +294,20 @@ Message: ${formData.message}
                 <motion.div
                   key={index}
                   variants={childVariants}
-                  className="group p-6 rounded-xl border border-[#3a023b]/10 hover:border-[#3a023b]/30 transition-all duration-300 bg-white"
+                  className="group p-6 rounded-xl border border-dp/10 hover:border-dp/30 transition-all duration-300 bg-white"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="text-[#750477]">
+                    <div className="text-mp">
                       {item.icon}
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1 text-[#3a023b] flex items-center">
+                      <h3 className="small-dark-heading mb-1 flex items-center">
                         {item.title}
                         {item.showNav && (
-                          <Navigation className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-[#750477]" />
+                          <Navigation className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity text-mp" />
                         )}
                       </h3>
-                      <p className="text-[#3a023b]/70">{item.content}</p>
+                      <p className="normal-mp-text">{item.content}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -336,7 +336,7 @@ Message: ${formData.message}
         >
           <div className="max-w-md mx-auto">
             <motion.h2 
-              className="text-2xl font-bold text-[#3a023b] mb-8"
+              className="large-dark-heading mb-8"
               variants={childVariants}
             >
               Send Us a Message
@@ -366,11 +366,11 @@ Message: ${formData.message}
                 }
               ].map((field, index) => (
                 <motion.div key={field.name} variants={childVariants}>
-                  <label htmlFor={field.name} className="block text-sm font-medium text-[#3a023b] mb-2">
+                  <label htmlFor={field.name} className="block mid-mp-subhd mb-2">
                     {field.label}
                   </label>
                   <div className="relative">
-                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-[#750477]">
+                    <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-mp">
                       {field.icon}
                     </div>
                     <input
@@ -379,7 +379,7 @@ Message: ${formData.message}
                       name={field.name}
                       value={formData[field.name as keyof typeof formData]}
                       onChange={handleChange}
-                      className="pl-10 w-full p-3 border border-[#3a023b]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#750477]/20 focus:border-[#750477]"
+                      className="pl-10 w-full p-3 border border-dp/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-mp/20 focus:border-mp"
                       placeholder={field.placeholder}
                       required
                     />
@@ -388,18 +388,18 @@ Message: ${formData.message}
               ))}
 
               <motion.div variants={childVariants}>
-                <label htmlFor="message" className="block text-sm font-medium text-[#3a023b] mb-2">
+                <label htmlFor="message" className="block mid-mp-subhd mb-2">
                   Message
                 </label>
                 <div className="relative">
-                  <MessageSquare className="absolute left-3 top-3 text-[#750477] w-5 h-5" />
+                  <MessageSquare className="absolute left-3 top-3 text-mp w-5 h-5" />
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="pl-10 w-full p-3 border border-[#3a023b]/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#750477]/20 focus:border-[#750477]"
+                    className="pl-10 w-full p-3 border border-dp/10 rounded-lg focus:outline-none focus:ring-2 focus:ring-mp/20 focus:border-mp"
                     placeholder="Your message here..."
                     required
                   />
@@ -413,7 +413,7 @@ Message: ${formData.message}
                 <button
                   type="button"
                   onClick={handleEmailClick}
-                  className="flex-1 inline-flex justify-center items-center px-6 py-3 bg-[#3a023b] text-white rounded-lg hover:bg-[#750477] transition-colors duration-200"
+                  className="flex-1 inline-flex justify-center items-center px-6 py-3 bg-dp text-white rounded-lg hover:bg-mp transition-colors duration-200"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Send via Email

@@ -38,6 +38,7 @@ module.exports = {
 		  },
 		  dp:'#3a023b',
 		  mp:'#750477',
+		  gy:'##374151',
 		  'pastel-blue': '#a0c8ff',
 		  'pastel-pink': '#ff8ca0',
 		  background: 'hsl(var(--background))',

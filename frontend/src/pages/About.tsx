@@ -315,16 +315,16 @@ function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8">
-              <h1 className="text-3xl font-semibold text-[#3a023b]">
+              <h1 className="large-dark-heading">
                 Your Future, Your Path— We Guide the Way
               </h1>
-              <p className="text-lg text-[#750477]">
+              <p className="mid-mp-subhd">
                 No generic advice—only tailored strategies for your success!
               </p>
               <button 
                 onClick={scrollToAboutCard} 
                 className="inline-flex items-center px-6 py-3 text-white 
-                bg-[#3a023b] hover:bg-[#750477] rounded-xl transition-colors duration-200"
+                bg-dp hover:bg-mp rounded-lg transition-colors duration-200"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Free Consultation
@@ -365,37 +365,37 @@ function About() {
         transition={{ duration: 1, ease: "easeOut" }} 
         viewport={{ once: true }}
       >
-        <div className="relative bg-[#3a023b] z-20 px-6 py-20">
+        <div className="relative bg-dp z-20 px-6 py-20">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-semibold text-white mb-4">Why Choose Us</h2>
-            <p className="text-white text-lg">Empowering your journey to success</p>
+            <h2 className="large-dark-heading mb-4">Why Choose Us</h2>
+            <p className="mid-mp-subhd">Empowering your journey to success</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="group bg-white rounded-xl p-8 shadow-sm border border-[#3a023b]/10 hover:shadow-2xl transition-shadow">
-              <Users className="w-12 h-12 text-[#750477] mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-xl font-semibold text-[#3a023b] mb-4">Personal Attention</h3>
-              <p className="text-[#750477]">
+            <div className="group bg-white rounded-xl p-8 shadow-sm border border-dp/10 hover:shadow-2xl transition-shadow">
+              <Users className="w-12 h-12 text-mp mb-6 transition-transform duration-300 group-hover:scale-110" />
+              <h3 className="small-dark-heading mb-4">Personal Attention</h3>
+              <p className="normal-black-text">
                 We work with a small cohort to ensure 100% dedication to each student. Your ambitions matter to us, and we're here to make them achievable.
               </p>
             </div>
-            <div className="group bg-white rounded-xl p-8 shadow-sm border border-[#3a023b]/10 hover:shadow-2xl transition-shadow">
-              <Brain className="w-12 h-12 text-[#750477] mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-xl font-semibold text-[#3a023b] mb-4">Holistic Development</h3>
-              <p className="text-[#750477]">
+            <div className="group bg-white rounded-xl p-8 shadow-sm border border-dp/10 hover:shadow-2xl transition-shadow">
+              <Brain className="w-12 h-12 text-mp mb-6 transition-transform duration-300 group-hover:scale-110" />
+              <h3 className="small-dark-heading mb-4">Holistic Development</h3>
+              <p className="normal-black-text">
                 Our program deconstructs your interests and influences, helping you find the awareness needed to be the best version of yourself in an increasingly competitive landscape.
               </p>
             </div>
-            <div className="group bg-white rounded-xl p-8 shadow-sm border border-[#3a023b]/10 hover:shadow-2xl transition-shadow">
-              <Compass className="w-12 h-12 text-[#750477] mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-xl font-semibold text-[#3a023b] mb-4">Customized Guidance</h3>
-              <p className="text-[#750477]">
+            <div className="group bg-white rounded-xl p-8 shadow-sm border border-dp/10 hover:shadow-2xl transition-shadow">
+              <Compass className="w-12 h-12 text-mp mb-6 transition-transform duration-300 group-hover:scale-110" />
+              <h3 className="small-dark-heading mb-4">Customized Guidance</h3>
+              <p className="normal-black-text">
                 We offer highly customized College Counseling alongside career guidance, viewing top-tier college admission as a stepping stone toward a fulfilling career and balanced life.
               </p>
             </div>
-            <div className="group bg-white rounded-xl p-8 shadow-sm border border-[#3a023b]/10 hover:shadow-2xl transition-shadow">
-              <Heart className="w-12 h-12 text-[#750477] mb-6 transition-transform duration-300 group-hover:scale-110" />
-              <h3 className="text-xl font-semibold text-[#3a023b] mb-4">Continuous Support</h3>
-              <p className="text-[#750477]">
+            <div className="group bg-white rounded-xl p-8 shadow-sm border border-dp/10 hover:shadow-2xl transition-shadow">
+              <Heart className="w-12 h-12 text-mp mb-6 transition-transform duration-300 group-hover:scale-110" />
+              <h3 className="small-dark-heading mb-4">Continuous Support</h3>
+              <p className="normal-black-text">
                 Our program ensures you feel supported throughout your high school journey - from navigating complex college applications to building your future career path. We're here to empower you.
               </p>
             </div>
@@ -408,8 +408,8 @@ function About() {
         <div className="absolute inset-0" />
         <div className="relative container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-semibold text-[#3a023b] mb-4">Meet Our Team</h2>
-            <p className="text-lg text-[#750477]">Dedicated professionals committed to your success</p>
+            <h2 className="large-dark-heading mb-4">Meet Our Team</h2>
+            <p className="mid-mp-subhd">Dedicated professionals committed to your success</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
             {/* Team Member 1 */}
@@ -422,19 +422,19 @@ function About() {
                 />
                 <div className="absolute inset-0 " />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-2">Sarah Johnson</h3>
-                  <p className="text-lg text-white mb-4">Education Counselor</p>
-                  <p className="text-white mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <h3 className="small-dark-heading mb-2">Sarah Johnson</h3>
+                  <p className="mid-mp-subhd mb-4">Education Counselor</p>
+                  <p className="normal-black-text mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     With 15 years of experience in college counseling, Sarah specializes in helping students discover their unique path to success.
                   </p>
                   <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                    <a href="#" className="text-white hover:text-[#750477] transition-colors">
+                    <a href="#" className="text-white hover:text-mp transition-colors">
                       <Linkedin className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-white hover:text-[#750477] transition-colors">
+                    <a href="#" className="text-white hover:text-mp transition-colors">
                       <Twitter className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-white hover:text-[#750477] transition-colors">
+                    <a href="#" className="text-white hover:text-mp transition-colors">
                       <Mail className="w-5 h-5" />
                     </a>
                   </div>
@@ -451,19 +451,19 @@ function About() {
                 />
                 <div className="absolute inset-0 " />
                 <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-semibold text-white mb-2">David Chen</h3>
-                  <p className="text-lg text-white mb-4">Career Development Specialist</p>
-                  <p className="text-white mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                  <h3 className="small-dark-heading mb-2">David Chen</h3>
+                  <p className="mid-mp-subhd mb-4">Career Development Specialist</p>
+                  <p className="normal-black-text mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                     David brings industry expertise and a deep understanding of career landscapes to help students align their education with future goals.
                   </p>
                   <div className="flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
-                    <a href="#" className="text-white hover:text-[#750477] transition-colors">
+                    <a href="#" className="text-white hover:text-mp transition-colors">
                       <Linkedin className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-white hover:text-[#750477] transition-colors">
+                    <a href="#" className="text-white hover:text-mp transition-colors">
                       <Twitter className="w-5 h-5" />
                     </a>
-                    <a href="#" className="text-white hover:text-[#750477] transition-colors">
+                    <a href="#" className="text-white hover:text-mp transition-colors">
                       <Mail className="w-5 h-5" />
                     </a>
                   </div>

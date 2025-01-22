@@ -35,7 +35,7 @@ function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
       <div className="bg-white rounded-xl shadow-lg max-w-2xl w-full overflow-hidden mt-16 ">
         {/* Modal header */}
         <div className="sticky top-0 bg-white border-b border-gray-200 p-4 flex justify-between items-center">
-          <h2 className="text-xl font-semibold text-gray-900">{blog.title}</h2>
+          <h2 className="small-dark-heading">{blog.title}</h2>
           <button
             onClick={onClose}
             className="p-1 rounded-full hover:bg-gray-100 transition"
@@ -57,15 +57,15 @@ function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
 
           {/* Blog metadata */}
           <div className="flex items-center nom-ft mb-4">
-            <span className="mr-2 nom-ft">By {blog.author}</span>
-            <span className="mr-2 nom-ft">•</span>
-            <span className="mr-2 nom-ft">{blog.readTime} read</span>
+            <span className="mr-2 normal-black-text">By {blog.author}</span>
+            <span className="mr-2 normal-black-text">•</span>
+            <span className="mr-2 normal-black-text">{blog.readTime} read</span>
           </div>
 
           {/* Blog content */}
           <div className="prose max-w-none">
             {fullContent.split('\n\n').map((paragraph, index) => (
-              <p key={index} className="nom-ft mb-4 leading-relaxed">
+              <p key={index} className="normal-black-text mb-4 leading-relaxed">
                 {paragraph}
               </p>
             ))}

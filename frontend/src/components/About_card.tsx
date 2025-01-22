@@ -73,7 +73,7 @@ function AboutCard() {
                   </div>
                 </div>
                 <div className="p-8">
-                  <p className="text-[#750477] leading-relaxed">{card.content}</p>
+                  <p className="normal-black-text leading-relaxed">{card.content}</p>
                 </div>
               </div>
             ) : (

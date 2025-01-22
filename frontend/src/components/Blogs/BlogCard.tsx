@@ -35,7 +35,7 @@ function BlogCard({ title, intro, author, readTime, image }: BlogCardProps) {
                 {author}
               </div>
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-gray-900">{title}</h3>
+            <h3 className="small-dark-heading mb-2">{title}</h3>
             <p className="text-gray-700 mb-4">{intro}</p>
             <button 
               onClick={() => setIsModalOpen(true)}
