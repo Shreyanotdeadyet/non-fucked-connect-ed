@@ -25,7 +25,7 @@ function BlogCard({ title, intro, author, readTime, image }: BlogCardProps) {
             />
           </div>
           <div className="p-8">
-            <div className="flex items-center gap-4 text-sm text-gray-600 mb-2">
+            <div className="flex items-center gap-4 text-sm text-gy mb-2">
               <div className="flex items-center">
                 <Clock className="w-4 h-4 mr-1 text-lilac-600" />
                 {readTime}
@@ -36,10 +36,10 @@ function BlogCard({ title, intro, author, readTime, image }: BlogCardProps) {
               </div>
             </div>
             <h3 className="small-dark-heading mb-2">{title}</h3>
-            <p className="text-gray-700 mb-4">{intro}</p>
+            <p className="text-gy mb-4">{intro}</p>
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="flex items-center text-lilac-600 hover:text-lilac-800 transition-colors"
+              className="flex items-center text-gy hover:text-gy transition-colors"
             >
               <BookOpen className="w-4 h-4 mr-1" />
               Read More

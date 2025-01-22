@@ -55,43 +55,35 @@
   }
 } 
 
-.nom-ft {
+/* .nom-ft {
   @apply font-robo1 font-bold text-slate-900 text-xl 
-  /* text-slate-900 */
 }
 
 .nom-ft-purple {
   @apply font-robo1 font-bold text-dpup text-xl 
-  /* text-slate-900 */
 }
 
 .nom-b-ft{
-  /*heading thoda bold */
   @apply font-robo2 font-black text-pink-900 text-2xl
 }
 
 .nom-b-ft-slate{
-  /*heading thoda bold */
   @apply font-robo2 font-black text-slate-900 text-2xl
 }
 
 .nom-b-ft-teal{
-  /*heading thoda bold */
   @apply font-robo2 font-black text-tg-600 text-2xl
 }
 
 .nom-b-ft-purple{
-  /*heading thoda bold */
   @apply font-robo2 font-black text-2xl text-dpup
 }
 
 .nom-b-ft-white{
-  /*heading thoda bold */
   @apply font-robo2 font-black text-2xl text-white
 }
 
 .hd-ft{
-  /* heading only */
   @apply font-robo2 font-bold text-dpup text-fluid
 }
 
@@ -105,7 +97,7 @@
 
 .hd-ft-slate{
   @apply font-robo2 text-4xl font-bold text-slate-900
-}
+} */
 
 
 /* 3a dp */

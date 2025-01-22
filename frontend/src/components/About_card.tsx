@@ -15,21 +15,21 @@ function AboutCard() {
       id: 1,
       title: "Our Story",
       content: "Founded in 2020, we embarked on a journey to revolutionize digital experiences. What started as a small team of passionate innovators has grown into a global community of creative minds. Through challenges and triumphs, we've remained committed to our founding principle: technology should empower human connection, not replace it. Our journey is marked by continuous learning, adaptation, and an unwavering commitment to excellence in everything we do.",
-      icon: <BookOpen className="w-8 h-8 mb-4" />,
+      icon: <BookOpen className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
     },
     {
       id: 2,
       title: "Our Mission",
       content: "We're on a mission to transform how people interact with technology. Our goal is to create digital solutions that not only solve problems but inspire and delight users. We believe in making technology accessible to all, breaking down barriers, and fostering innovation that serves humanity. Through our work, we strive to create a more connected, efficient, and inclusive digital world.",
-      icon: <Target className="w-8 h-8 mb-4" />,
+      icon: <Target className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200"
     },
     {
       id: 3,
       title: "Our Approach",
       content: "Our approach combines cutting-edge technology with human-centered design principles. We believe in collaborative innovation, working closely with our clients to understand their unique challenges and aspirations. Through agile methodologies, continuous feedback, and iterative improvement, we deliver solutions that exceed expectations. Our process emphasizes sustainability, scalability, and long-term impact.",
-      icon: <Lightbulb className="w-8 h-8 mb-4" />,
+      icon: <Lightbulb className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200"
     }
   ];

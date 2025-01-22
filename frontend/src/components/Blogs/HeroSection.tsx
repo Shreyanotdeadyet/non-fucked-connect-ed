@@ -35,8 +35,8 @@ function HeroSection() {
       className=" top-[50px] left-0 w-full h-full object-cover brightness-90"
     />
 
-      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-        <h1 className="text-4xl md:text-5xl text-white font-bold text-center px-4 leading-tight">
+      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <h1 className="text-4xl md:text-5xl text-white font-semibold text-center px-4 leading-tight">
           <span className="hidden sm:inline">
             <FlipText word="Discover Inspiring Stories" />
           </span>

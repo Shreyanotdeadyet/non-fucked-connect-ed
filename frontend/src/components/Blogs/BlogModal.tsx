@@ -40,7 +40,7 @@ function BlogModal({ isOpen, onClose, blog }: BlogModalProps) {
             onClick={onClose}
             className="p-1 rounded-full hover:bg-gray-100 transition"
           >
-            <X className="w-5 h-5 text-gray-600" />
+            <X className="w-5 h-5 text-gy" />
           </button>
         </div>
 
