@@ -104,14 +104,14 @@
 
 // export default Services;
 
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GraduationCap, BookOpen, Users, Brain } from 'lucide-react';
+import { GraduationCap, BookOpen, Users, Briefcase } from 'lucide-react';
 
 interface Tab {
   label: string;
-  description: string;
-  features: string[];
+  description: string[];
   image: string;
   icon: React.ReactNode;
 }
@@ -119,50 +119,48 @@ interface Tab {
 function Services() {
   const tabs: Tab[] = [
     {
-      label: "Elementary",
-      description: "Building strong foundations through personalized learning and creative exploration for grades 1-5.",
-      features: [
-        "One-on-one mentoring sessions",
-        "Interactive learning activities",
-        "Reading and writing workshops",
-        "Math skill development",
-        "Creative expression programs"
+      label: "Undergraduate Services",
+      description: [
+        "High school can be a challenging time, filled with academic pressure and uncertainty about the future.",
+        "We provide support for students in Grades 8 to 12 to navigate career paths, university selection, personal statement writing, and interview preparation.",
+        "Our services help students confidently prepare for higher education in a competitive landscape."
       ],
-     
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80",
+      icon: <GraduationCap className="inline-block mr-2" size={20} />
+    },
+    {
+      label: "Postgraduate Services",
+      description: [
+        "Postgraduate decisions can be daunting due to career considerations, financial commitments, and program selection.",
+        "We offer personalized guidance to help students assess goals, choose the right courses, and navigate scholarships.",
+        "We ensure students understand the long-term impact of their choices and make informed decisions."
+      ],
+      image: "https://images.unsplash.com/photo-1492538368677-f6e0afe31dcc?auto=format&fit=crop&q=80",
       icon: <BookOpen className="inline-block mr-2" size={20} />
     },
     {
-      label: "Middle School",
-      description: "Nurturing academic excellence and personal growth for grades 6-8 through comprehensive support.",
-      features: [
-        "Subject-specific tutoring",
-        "Study skills development",
-        "Time management training",
-        "Project-based learning",
-        "Social skills development"
+      label: "Boarding School Applications",
+      description: [
+        "We assist students and families in selecting boarding schools that align with their aspirations and needs.",
+        "Our guidance covers essay writing, securing strong recommendations, and interview preparation.",
+        "We ensure students make well-informed decisions and feel confident throughout the application process."
       ],
-     
-      image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&q=80",
+      image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&q=80",
       icon: <Users className="inline-block mr-2" size={20} />
     },
     {
-      label: "High School",
-      description: "Comprehensive college preparation and academic excellence program for grades 9-12.",
-      features: [
-        "College application guidance",
-        "SAT/ACT preparation",
-        "Advanced placement support",
-        "Career counseling",
-        "Leadership development"
+      label: "Institutional Collaborations",
+      description: [
+        "We partner with schools to help students explore academic passions and successful career paths.",
+        "We collaborate with corporations to offer employee benefit programs supporting the educational needs of employees' children.",
+        "Our programs provide structured guidance to ensure students reach their full potential."
       ],
-      
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80",
-      icon: <Brain className="inline-block mr-2" size={20} />
+      image: "https://images.unsplash.com/photo-1588075592325-006333959b6d?auto=format&fit=crop&q=80",
+      icon: <Briefcase className="inline-block mr-2" size={20} />
     }
   ];
-  const [selectedTab, setSelectedTab] = useState<Tab>(tabs.length > 0 ? tabs[0] : {} as Tab);
 
+  const [selectedTab, setSelectedTab] = useState<Tab>(tabs[0]);
 
   return (
     <section className="min-h-screen bg-white py-24 px-4">
@@ -177,28 +175,28 @@ function Services() {
           </p>
         </div>
 
-        {/* Navigation */}
+        {/* Navigation (2x2 grid on small screens) */}
         <div className="flex justify-center mb-16">
-          <div className="inline-flex bg-white rounded-xl p-2 shadow-sm border border-[#3a023b]/10">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:flex-row bg-white rounded-xl p-2 shadow-sm border border-[#3a023b]/10">
             {tabs.map((tab) => (
               <button
                 key={tab.label}
                 onClick={() => setSelectedTab(tab)}
-                className={`px-8 py-4 rounded-lg text font-medium transition-all duration-200 ${
+                className={`px-6 py-3 sm:px-8 sm:py-4 rounded-lg text font-medium transition-all duration-200 flex items-center justify-center ${
                   tab.label === selectedTab.label
                     ? 'bg-[#3a023b] text-white shadow-sm'
                     : 'text-[#750477] hover:text-[#3a023b] hover:bg-[#f5e6f5]'
                 }`}
               >
                 {tab.icon}
-                <span className="hidden sm:inline">{tab.label}</span>
+                <span className="ml-2 text-center">{tab.label}</span>
               </button>
             ))}
           </div>
         </div>
 
         {/* Content */}
-        <div className="bg-white rounded-xl shadow-sm p-12 border border-[#3a023b]/10 min-h-[600px]">
+        <div className="bg-white rounded-xl shadow-xl p-12 border border-[#3a023b]/10 min-h-[400px]">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Text Content */}
             <AnimatePresence mode="wait">
@@ -211,22 +209,14 @@ function Services() {
                 className="space-y-8"
               >
                 <h3 className="text-2xl font-semibold text-[#3a023b]">
-                  {selectedTab.label} Program
+                  {selectedTab.label}
                 </h3>
-                <p className="text-[#750477] leading-relaxed">
-                  {selectedTab.description}
-                </p>
-                
-                <div>
-                  <h4 className="text-lg font-semibold text-[#3a023b] mb-4">Key Features</h4>
-                  <ul className="list-disc list-inside space-y-2 text-black">
-                    {selectedTab.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
 
-               
+                <ul className="list-disc list-inside space-y-2 text-black">
+                  {selectedTab.description.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
               </motion.div>
             </AnimatePresence>
 

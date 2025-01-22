@@ -1,7 +1,6 @@
-
 import React, { useState } from 'react';
 import { BookOpen, Target, Lightbulb } from 'lucide-react';
-import "../styles/about.css";
+
 interface Card {
   id: number;
   title: string;
@@ -45,17 +44,15 @@ function AboutCard() {
   };
 
   return (
-
-    
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-8">
+    <div className="min-h-screen bg-white flex items-center justify-center p-8">
       <div className="flex gap-6 w-full max-w-6xl">
         {cards.map((card) => (
           <div
             key={card.id}
             className={`transition-all duration-500 ease-in-out ${
               getCardPosition(card.id) === "main-card"
-                ? "flex-grow bg-white rounded-xl shadow-lg overflow-hidden"
-                : "w-48 bg-dpup rounded-xl cursor-pointer hover:bg-pup"
+                ? "flex-grow bg-white rounded-xl shadow-sm border border-[#3a023b]/10 overflow-hidden"
+                : "w-48 bg-[#3a023b] rounded-xl cursor-pointer hover:bg-[#750477] transition-colors"
             }`}
             onClick={() => setActiveCard(card.id)}
           >
@@ -67,22 +64,21 @@ function AboutCard() {
                     alt={card.title}
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-60"></div>
-                  <div className="absolute bottom-2 left-2 p-2 bg-dpup rounded-xl text-white">
+                  <div className="absolute inset-0 "></div>
+                  <div className="absolute bottom-2 left-2 p-4 bg-[#3a023b] rounded-xl text-white">
                     <div className="flex items-center">
                       {card.icon}
-                      {/* hf-ft white text-3xl */}
-                      <h2 className="font-robo2 text-3xl font-bold text-white ml-4">{card.title}</h2>
+                      <h2 className="text-2xl font-semibold text-white ml-4">{card.title}</h2>
                     </div>
                   </div>
                 </div>
                 <div className="p-8">
-                  <p className="nom-ft leading-relaxed">{card.content}</p>
+                  <p className="text-[#750477] leading-relaxed">{card.content}</p>
                 </div>
               </div>
             ) : (
-              <div className="h-full flex items-center justify-center">
-                <h2 className="vertical-text nom-b-ft-white whitespace-nowrap">
+              <div className="h-full flex items-center justify-center p-6">
+                <h2 className="vertical-text text-white font-semibold whitespace-nowrap transform -rotate-180" style={{ writingMode: 'vertical-rl' }}>
                   {card.title}
                 </h2>
               </div>

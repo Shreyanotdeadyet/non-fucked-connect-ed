@@ -11,7 +11,7 @@ interface SingleCardProps {
 const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardIndex }) => {
   const backSideContent = [
     {
-      title: "Trusted Excellence",
+      title: "All Majors Welcome",
       icon: <Shield className="w-8 h-8 text-mp" />,
       text: "Over a decade of proven expertise in delivering outstanding results.",
       features: ["Industry-leading standards", "Proven track record"],
@@ -34,7 +34,7 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
       text: "Our students have secured admissions to top global universities.",
       features: ["Ivy League admissions", "Merit-based scholarships"],
     },
-  ];
+  ];  
 
   return (
     <div className="group w-80 h-[450px] relative perspective">
@@ -70,14 +70,11 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
             </div>
 
             {/* Content */}
-            <div className="p-6 pt-8">
+            <div className="p-6 pt-8 h-full flex flex-col justify-between">
               <h3 className="small-dark-heading mb-4">
                 {backSideContent[cardIndex - 1].title}
               </h3>
-              <p className="normal-black-text leading-relaxed mb-6">
-                {backSideContent[cardIndex - 1].text}
-              </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 overflow-y-auto flex-1">
                 {backSideContent[cardIndex - 1].features.map((feature, index) => (
                   <li key={index} className="flex items-center normal-black-text">
                     <div className="w-1.5 h-1.5 bg-mp rounded-full mr-2"></div>
