@@ -13,26 +13,26 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
     {
       title: "All Majors Welcome",
       icon: <Shield className="w-8 h-8 text-[#750477]" />,
-      text: "Support for Every Field:",
-      features: ["Tailored guidance for STEM, Arts, Business, and interdisciplinary studies.", "Personalized mentorship to align with your academic interests and career goals."],
+      text: "Over a decade of proven expertise in delivering outstanding results.",
+      features: ["Industry-leading standards", "Proven track record"],
     },
     {
-      title: "Global Guidance",
+      title: "24/7 Support",
       icon: <Clock className="w-8 h-8 text-[#750477]" />,
-      text: "Global Guidance, Local Expertise:",
-      features: ["Assistance with applications to universities worldwide.", "Insights into different education systems for a seamless transition."],
+      text: "Round-the-clock assistance ensuring you're never left without help.",
+      features: ["Instant response time", "Expert team available"],
     },
     {
-      title: "Expert-Led Process",
+      title: "Personalized Guidance",
       icon: <Heart className="w-8 h-8 text-[#750477]" />,
-      text: "Blending Experience & Strategy",
-      features: ["Combining teaching and counseling expertise for a customized approach.", "Understanding individual aspirations to navigate higher education complexities.                                                                                                                                                                                                                                                                 "],
+      text: "Tailored strategies to fit every student's academic journey.",
+      features: ["Custom career planning", "One-on-one mentorship"],
     },
     {
-      title: "Beyond Admissions",
+      title: "Proven Success",
       icon: <Trophy className="w-8 h-8 text-[#750477]" />,
-      text: "Beyond Just Admissions:",
-      features: ["Helping students secure spots at top-tier universities.", "Addressing unique concerns like dietary preferences and climate adaptation."],
+      text: "Our students have secured admissions to top global universities.",
+      features: ["Ivy League admissions", "Merit-based scholarships"],
     },
   ];  
 
@@ -70,14 +70,11 @@ const SingleCard: React.FC<SingleCardProps> = ({ frontImage, frontText, cardInde
             </div>
 
             {/* Content */}
-            <div className="p-6 pt-8">
+            <div className="p-6 pt-8 h-full flex flex-col justify-between">
               <h3 className="text-xl font-semibold text-[#3a023b] mb-4">
                 {backSideContent[cardIndex - 1].title}
               </h3>
-              <p className="text-[#750477] leading-relaxed mb-6">
-                {backSideContent[cardIndex - 1].text}
-              </p>
-              <ul className="space-y-3">
+              <ul className="space-y-3 overflow-y-auto flex-1">
                 {backSideContent[cardIndex - 1].features.map((feature, index) => (
                   <li key={index} className="flex items-center text-[#750477]">
                     <div className="w-1.5 h-1.5 bg-[#750477] rounded-full mr-2"></div>
